@@ -1,3 +1,5 @@
+// //FROM TEMPLATE
+
 import React from 'react'
 import {connect} from 'react-redux'
 
@@ -20,21 +22,6 @@ export const Greetings = ({greetings, dispatch}) => (
           My first website with <strong>Bulma</strong>!
         </p>
       </div>
-
-      <div className="columns">
-  <div className="column">
-    First column
-  </div>
-  <div className="column">
-    Second column
-  </div>
-  <div className="column">
-    Third column
-  </div>
-  <div className="column">
-    Fourth column
-  </div>
-</div>
     </section>
 
   </div>

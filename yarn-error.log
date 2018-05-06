@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn dev
+  /usr/local/bin/node /usr/local/bin/yarn add react
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin
@@ -67,8 +67,7 @@ npm manifest:
       "nock": "^9.2.5",
       "node-sass": "^4.7.2",
       "pg": "^6.2.3",
-      "react": "^15.5.4",
-      "react-dom": "^15.5.4",
+      "react": "^16.3.2",
       "react-redux": "^5.0.5",
       "react-router-dom": "^4.1.1",
       "react-test-renderer": "^15.5.4",
@@ -1814,14 +1813,6 @@ Lockfile:
       ripemd160 "^2.0.0"
       safe-buffer "^5.0.1"
       sha.js "^2.4.8"
-  
-  create-react-class@^15.6.0:
-    version "15.6.3"
-    resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
-    dependencies:
-      fbjs "^0.8.9"
-      loose-envify "^1.3.1"
-      object-assign "^4.1.1"
   
   cross-spawn@^3.0.0:
     version "3.0.1"
@@ -5807,15 +5798,6 @@ Lockfile:
       minimist "^1.2.0"
       strip-json-comments "~2.0.1"
   
-  react-dom@^15.5.4:
-    version "15.6.2"
-    resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
-    dependencies:
-      fbjs "^0.8.9"
-      loose-envify "^1.1.0"
-      object-assign "^4.1.0"
-      prop-types "^15.5.10"
-  
   react-redux@^5.0.5:
     version "5.0.7"
     resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.7.tgz#0dc1076d9afb4670f993ffaef44b8f8c1155a4c8"
@@ -5857,15 +5839,14 @@ Lockfile:
       fbjs "^0.8.9"
       object-assign "^4.1.0"
   
-  react@^15.5.4:
-    version "15.6.2"
-    resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
+  react@^16.3.2:
+    version "16.3.2"
+    resolved "https://registry.yarnpkg.com/react/-/react-16.3.2.tgz#fdc8420398533a1e58872f59091b272ce2f91ea9"
     dependencies:
-      create-react-class "^15.6.0"
-      fbjs "^0.8.9"
+      fbjs "^0.8.16"
       loose-envify "^1.1.0"
-      object-assign "^4.1.0"
-      prop-types "^15.5.10"
+      object-assign "^4.1.1"
+      prop-types "^15.6.0"
   
   read-pkg-up@^1.0.1:
     version "1.0.1"
@@ -7578,9 +7559,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 2
   Command: sh
-  Arguments: -c nodemon --watch server & webpack --watch
+  Arguments: -c webpack && knex migrate:latest
   Directory: /Users/stevetorrens/workspace/portfolio
   Output:
   
