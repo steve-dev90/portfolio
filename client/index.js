@@ -6,7 +6,7 @@ import thunkMiddleware from 'redux-thunk'
 
 //For bulma CSS framework?
 import 'bulma'
-import 'font-awesome/css/font-awesome.css';
+import 'font-awesome/css/font-awesome.css'
 import './index.css'
 
 import reducers from './reducers'

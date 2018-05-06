@@ -1,23 +1,48 @@
-// import React from 'react'
+import React from 'react'
+import {connect} from 'react-redux'
+import { showAbout, hideAbout } from '../actions/portfolio';
 
+class About extends React.Component {
 
-// export const Greetings = ({greetings, dispatch}) => (
-//   <React.Fragment>
-//     <section className="section">  
-//       <Header />
-//     </section>  
-//     <section className="About">
-//       <About />
-//     </section>
-//     <section className="Projects">
-//       <Projects />
-//     </section>
-//   </React.Fragment>
-// )
+  render(props) {
 
-// // const mapStateToProps = (state) => {
-// //   return {greetings: state.greetings}
-// // }
+    return (
+      <React.Fragment>  
+        <div className="columns">
+          <div className="column is-1">
+            
+            {this.props.portfolio.aboutDisplay 
+            ?             
+            <button className="button" onClick={() => this.props.dispatch(hideAbout())}>
+              <span className="icon ">
+                <i className="fas fa-heading">U</i> 
+              </span>
+            </button> 
+            :
+            <button className="button" onClick={() => this.props.dispatch(showAbout())}>
+              <span className="icon ">
+                <i className="fas fa-heading">D</i> 
+              </span>
+            </button>}           
+     
+          </div>
 
-// // export default connect(mapStateToProps)(Greetings)
-// export default connect
+          <div className="column is-11">
+            <h2 className="title is-2">About</h2>
+            {this.props.portfolio.aboutDisplay &&              
+            <p> Bla Bla Blad </p>}        
+          </div>
+      
+        </div>
+      </React.Fragment>   
+    
+    )
+  }
+}
+
+const mapStateToProps = (state) => {
+  console.log(state.portfolio)  
+  return {portfolio: state.portfolio}
+}
+
+export default connect(mapStateToProps)(About) 
