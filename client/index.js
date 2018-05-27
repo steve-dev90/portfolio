@@ -5,9 +5,7 @@ import {createStore, applyMiddleware, compose} from 'redux'
 import thunkMiddleware from 'redux-thunk'
 
 //For bulma CSS framework?
-import 'bulma'
-import 'font-awesome/css/font-awesome.css'
-import './index.css'
+import './sass/main.scss'
 
 import reducers from './reducers'
 import App from './components/App'

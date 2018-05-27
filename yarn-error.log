@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add react
+  /usr/local/bin/node /usr/local/bin/yarn
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin
@@ -68,14 +68,15 @@ npm manifest:
       "node-sass": "^4.7.2",
       "pg": "^6.2.3",
       "react": "^16.3.2",
+      "react-dom": "^16.3.2",
       "react-redux": "^5.0.5",
       "react-router-dom": "^4.1.1",
       "react-test-renderer": "^15.5.4",
       "redux": "^3.6.0",
       "redux-mock-store": "^1.5.1",
       "redux-thunk": "^2.2.0",
-      "sass-loader": "^6.0.7",
-      "style-loader": "^0.20.2",
+      "sass-loader": "^7.0.1",
+      "style-loader": "^0.20.3",
       "superagent": "^2.2.0",
       "url-loader": "^1.0.1",
       "webpack": "^2.3.3",
@@ -5798,6 +5799,15 @@ Lockfile:
       minimist "^1.2.0"
       strip-json-comments "~2.0.1"
   
+  react-dom@^16.3.2:
+    version "16.3.2"
+    resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.3.2.tgz#cb90f107e09536d683d84ed5d4888e9640e0e4df"
+    dependencies:
+      fbjs "^0.8.16"
+      loose-envify "^1.1.0"
+      object-assign "^4.1.1"
+      prop-types "^15.6.0"
+  
   react-redux@^5.0.5:
     version "5.0.7"
     resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.7.tgz#0dc1076d9afb4670f993ffaef44b8f8c1155a4c8"
@@ -6253,9 +6263,9 @@ Lockfile:
       scss-tokenizer "^0.2.3"
       yargs "^7.0.0"
   
-  sass-loader@^6.0.7:
-    version "6.0.7"
-    resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-6.0.7.tgz#dd2fdb3e7eeff4a53f35ba6ac408715488353d00"
+  sass-loader@^7.0.1:
+    version "7.0.1"
+    resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-7.0.1.tgz#fd937259ccba3a9cfe0d5f8a98746d48adfcc261"
     dependencies:
       clone-deep "^2.0.1"
       loader-utils "^1.0.1"
@@ -6736,7 +6746,7 @@ Lockfile:
     version "2.0.1"
     resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   
-  style-loader@^0.20.2:
+  style-loader@^0.20.3:
     version "0.20.3"
     resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.20.3.tgz#ebef06b89dec491bcb1fdb3452e913a6fd1c10c4"
     dependencies:

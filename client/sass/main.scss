@@ -1,0 +1,38 @@
+//import bulma
+@import './my_bulma.scss';
+
+//@import '~bulma-carousel/dist/bulma-carousel.sass';
+
+@import '~font-awesome/scss/_variables.scss';
+
+$fa-font-path: '~font-awesome/fonts';
+
+@import '~font-awesome/scss/font-awesome.scss';
+
+//Added for circular progress bar
+//@import '~react-circular-progressbar/dist/styles.css';
+
+// .header {
+//     // top: 0;
+//     width: 105%;
+//     top: 0;
+//     left: 0;
+//     position: fixed;
+//     z-index: 1;
+//     background-color: white;
+//     img {
+//         display:block;
+//         margin:auto;
+//     }
+//     border-bottom: 1px #b6b6b6;
+//     box-shadow: 1px 3px 3px #b6b6b6;
+// }
+
+// .page-content {
+//     margin-top: 120px;
+// }
+
+// .circle-progress {
+//     height: 35vh;
+// }
+
