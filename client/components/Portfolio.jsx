@@ -3,7 +3,6 @@ import React from 'react'
 import About from './About'
 import Projects from './Projects'
 import Nav from './Nav'
-import { Link, Element } from 'react-scroll'
 
 const Portfolio = () => (
   <React.Fragment>
@@ -16,9 +15,9 @@ const Portfolio = () => (
       {/* <Header /> */}
       <h1 className="title is-1" >Steve Torrens</h1>
       <img src="/images/sketch.jpg"/>
-      <Element name="test1" className="element" >
+      {/* <Element name="test1" className="element" >
       test 12
-      </Element>
+      </Element> */}
     </section>  
     <section className="About">
       <div className="container">

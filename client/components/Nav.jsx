@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { showAbout, hideAbout } from '../actions/portfolio'
+import { showAbout, showProjects } from '../actions/portfolio'
 import { Link, Element } from 'react-scroll'
 
 const Nav = (props) => (
@@ -11,9 +11,16 @@ const Nav = (props) => (
         <div className="navbar-item has-dropdown is-hoverable">
           Menu
           <div className="navbar-dropdown is-boxed">
-            <button className="button is-white" onClick={() => props.dispatch(showAbout())}>
-               <Link activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={5000} >About </Link>
-            </button>  
+            <Link activeClass="active" className="About" to="About" spy={true} smooth={true} duration={800} >
+              <button className="button is-white navbar-item" onClick={() => props.dispatch(showAbout())}>
+                About 
+              </button> 
+            </Link> 
+            <Link activeClass="active" className="Projects" to="Projects" spy={true} smooth={true} duration={800} >
+              <button className="button is-white navbar-item" onClick={() => props.dispatch(showProjects())}>
+                Projects
+              </button> 
+            </Link> 
           </div>
 
         </div>

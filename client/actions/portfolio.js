@@ -1,4 +1,5 @@
 export const showAbout = () => {
+    console.log("action sa")
     return {
       type: 'SHOW_ABOUT'
     }

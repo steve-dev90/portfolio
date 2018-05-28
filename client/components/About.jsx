@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { showAbout, hideAbout } from '../actions/portfolio'
+import { Link, Element } from 'react-scroll'
 
 class About extends React.Component {
 
@@ -12,7 +13,10 @@ class About extends React.Component {
 
 
           <div className="column is-11">
-            <h2 className="title is-2">About</h2>
+            <Element name="About" className="element" >
+              <h2 className="title is-2">About</h2>
+            </Element>
+            
             {this.props.portfolio.aboutDisplay &&              
             <p> Bla Bla Blad </p>}        
           </div>
