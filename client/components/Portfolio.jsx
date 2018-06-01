@@ -3,22 +3,22 @@ import React from 'react'
 import About from './About'
 import Projects from './Projects'
 import Nav from './Nav'
+import Header from './Header'
+import Hero from './Hero'
 
 const Portfolio = () => (
   <React.Fragment>
-    <nav className="navbar is-transparent">
+    <nav className="navbar is-transparent is-size-4">
       <div className="container">
         <Nav />
       </div>
     </nav>  
-    <section className="section">  
-      {/* <Header /> */}
-      <h1 className="title is-1" >Steve Torrens</h1>
-      <img src="/images/sketch.jpg"/>
-      {/* <Element name="test1" className="element" >
-      test 12
-      </Element> */}
-    </section>  
+    <section className="hero is-info"> 
+      <Header /> 
+    </section> 
+    <section className="hero is-light"> 
+      <Hero /> 
+    </section>          
     <section className="About">
       <div className="container">
         <About />

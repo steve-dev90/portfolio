@@ -1,15 +1,13 @@
 import React from 'react'
 
-const Header = () => (
-    <React.Fragment>  
+const Hero = () => (
+    <React.Fragment>          
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">
-            Steve Torrens
-          </h1>
+          <img src="/images/sketch2.jpg"/>
         </div>
       </div>
     </React.Fragment>  
   )
   
-  export default Header
+  export default Hero
