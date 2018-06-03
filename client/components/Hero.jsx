@@ -2,8 +2,8 @@ import React from 'react'
 
 const Hero = () => (
     <React.Fragment>          
-      <div class="hero-body">
-        <div class="container">
+      <div className="hero-body">
+        <div className="container">
           <img src="/images/sketch2.jpg"/>
         </div>
       </div>

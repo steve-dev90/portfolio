@@ -2,9 +2,9 @@ import React from 'react'
 
 const Header = () => (
     <React.Fragment>  
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
+      <div className="hero-body">
+        <div className="container">
+          <h1 className="title">
             Steve Torrens
           </h1>
         </div>
