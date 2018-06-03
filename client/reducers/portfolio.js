@@ -6,9 +6,9 @@ const initialPortfolio ={
 function portfolio (state = initialPortfolio, action) {
     switch (action.type) {
       case 'SHOW_ABOUT':
-        return {projectDisplay: state.projectDisplay, aboutDisplay: true}
+        return {projectsDisplay: state.projectsDisplay, aboutDisplay: true}
       case 'HIDE_ABOUT':
-        return {projectDisplay: state.projectDisplay, aboutDisplay: false}
+        return {projectsDisplay: state.projectsDisplay, aboutDisplay: false}
       case 'SHOW_PROJECTS':
         return {projectsDisplay: true, aboutDisplay: state.aboutDisplay}
       case 'HIDE_PROJECTS':

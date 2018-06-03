@@ -1,26 +1,14 @@
 import React from 'react'
-import {connect} from 'react-redux'
 
-import {getProjects} from '../actions/projects'
+const Project = (props) => (
+  
+  <React.Fragment> 
+    <div className="column is-12">
+      <h3 className="title">{props.project.title}</h3> 
+    </div>
 
-class Project extends React.Component {
-
-     
-  componentDidMount() {
-     this.props.dispatch(getProjects()) 
-  }
- 
-  render(props) {   
-    return (<React.Fragment>          
-        <article className="media">
-        <figure className="media-left">
-            <video width="600" height="600" controls>
-            <source src="/images/shopbrovid.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
-            </video>
-        </figure>
-        <div className="media-content">
-            <div className="content is-size-5">
+        <div className="column is-6">
+            <div className="content is-size-5 has-text-justified">
             <p>ShopBro2.0 was my final group project at bootcamp. The application is to help
             people keep under budget when they are shopping. Once a budget is set, users 
             add items to a shopping list and the app keeps track of the total cost. Users
@@ -31,15 +19,17 @@ class Project extends React.Component {
             <p>The team continue to work on this project...</p>
             </div>
         </div>
-        </article>
-    </React.Fragment> 
-    )}
-  
-}
- 
-const mapStateToProps = (state) => {
-   return {projects: state.projects}
-}
 
-export default connect(mapStateToProps)(Project)
+        <div className="column is-6">
+            <video width="600" height="600" controls>
+            <source src="/images/shopbrovid.mp4" type="video/mp4"/>
+            Your browser does not support the video tag.
+            </video>
+        </div>    
+
+
+</React.Fragment>   
+)
+
+export default Project
 

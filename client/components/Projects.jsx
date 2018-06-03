@@ -4,20 +4,25 @@ import { showProjects, hideProjects } from '../actions/portfolio';
 import { Link, Element } from 'react-scroll'
 import Project from './Project' 
 
-class About extends React.Component {
+import {getProjects} from '../actions/projects'
+
+class Projects extends React.Component {
+
+  componentDidMount() {
+    this.props.dispatch(getProjects()) 
+  }
 
   render(props) {
 
     return (
       <React.Fragment>  
-        <div className="columns">
+        <div className="columns is-multiline">
 
           <div className="column is-11">
             <Element name="Projects" className="element content-title" >
               <h2 className="title is-2">Projects</h2>
             </Element>
-            {this.props.portfolio.projectsDisplay &&              
-            <Project />}        
+       
           </div>
 
           <div className="column is-1">
@@ -38,6 +43,9 @@ class About extends React.Component {
             </button>}           
      
           </div>
+
+          {this.props.portfolio.projectsDisplay && 
+            this.props.projects.map(project => <Project project={project}/>)} 
       
         </div>
       </React.Fragment>   
@@ -47,8 +55,11 @@ class About extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.portfolio)  
-  return {portfolio: state.portfolio}
+  console.log('Projects',state)  
+  return {
+    portfolio: state.portfolio,
+    projects: state.projects
+  }
 }
 
-export default connect(mapStateToProps)(About) 
+export default connect(mapStateToProps)(Projects) 

@@ -7,8 +7,8 @@ router.get('/', (req, res) => {
   db.getProjects()
     .then(projects => {
       let projectsParsed = projects.map(project => {
-        return {'project_image': project.project_image,
-          'project_copy': JSON.parse(project.project_copy)}
+        return {'title': project.title, 'image': project.image,
+          'copy': JSON.parse(project.copy)}
       })
       res.json(projectsParsed)
     })
