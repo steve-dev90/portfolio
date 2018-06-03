@@ -31,4 +31,4 @@
 //   return {greetings: state.greetings}
 // }
 
-export default connect(mapStateToProps)(Greetings)
+//export default connect(mapStateToProps)(Greetings)
