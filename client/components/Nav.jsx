@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { showAbout, showProjects } from '../actions/portfolio'
+import { showAbout, showProjects, showContact } from '../actions/portfolio'
 import { Link, Element } from 'react-scroll'
 
 const Nav = (props) => (
@@ -31,6 +31,11 @@ const Nav = (props) => (
             <Link activeClass="active" className="Projects" to="Projects" spy={true} smooth={true} duration={800} >
               <button className="button is-white navbar-item is-size-5" onClick={() => props.dispatch(showProjects())}>
                 Projects
+              </button> 
+            </Link> 
+            <Link activeClass="active" className="Contact" to="Contact" spy={true} smooth={true} duration={800} >
+              <button className="button is-white navbar-item is-size-5" onClick={() => props.dispatch(showContact())}>
+                Contact
               </button> 
             </Link> 
           </div>

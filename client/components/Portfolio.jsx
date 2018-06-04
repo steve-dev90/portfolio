@@ -5,6 +5,7 @@ import Projects from './Projects'
 import Nav from './Nav'
 import Header from './Header'
 import Hero from './Hero'
+import Contact from './Contact'
 
 const Portfolio = () => (
   <React.Fragment>
@@ -29,6 +30,12 @@ const Portfolio = () => (
         <Projects />
       </div>
     </section>
+    <section className="Contact">
+      <div className="container">
+        <Contact />
+      </div>
+    </section>
+
   </React.Fragment>
 )
 
