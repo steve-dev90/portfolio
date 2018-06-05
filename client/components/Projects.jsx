@@ -55,7 +55,7 @@ class Projects extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('Projects',state)  
+  //console.log('Projects',state)  
   return {
     portfolio: state.portfolio,
     projects: state.projects

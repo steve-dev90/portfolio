@@ -8,7 +8,6 @@ export const receiveProjects = (projects) => {
 }
 
 export function getProjects () {
-  console.log('GETPROJECTS')  
   return (dispatch) => {
     request
       .get(`/api/projects`)
@@ -17,7 +16,6 @@ export function getProjects () {
           console.error(err.message)
           return
         }
-        console.log('GE',res.body)
         dispatch(receiveProjects(res.body))
       })
   }

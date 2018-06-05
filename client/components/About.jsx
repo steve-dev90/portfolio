@@ -66,7 +66,6 @@ class About extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.portfolio)  
   return {portfolio: state.portfolio}
 }
 
