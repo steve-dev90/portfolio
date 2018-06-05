@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { showContact, hideContact } from '../actions/portfolio'
 import { Link, Element } from 'react-scroll'
+import ContactForm from './ContactForm'
 
 class Contact extends React.Component {
 
@@ -20,7 +21,7 @@ class Contact extends React.Component {
             
             {this.props.portfolio.contactDisplay &&              
             <div className="content is-size-4">
-              <p>CONTACT</p>       
+              <ContactForm />      
             </div>}        
           </div>
           
