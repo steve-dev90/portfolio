@@ -19,22 +19,24 @@ const Nav = (props) => (
           </span></a>  
         </div>        
         <div className="navbar-item has-dropdown is-hoverable">
-          <div className ="navbar-link">
-            Menu
+          <div className="navbar-item">
+            <span className="icon">
+              <i className="fa fa-bars has-text-link"></i>
+            </span>
           </div>
           <div className="navbar-dropdown is-boxed">
             <Link activeClass="active" className="About" to="About" spy={true} smooth={true} duration={800} >
-              <button className="button is-white navbar-item is-size-5" onClick={() => props.dispatch(showAbout())}>
+              <button className="button is-white navbar-item is-size-6" onClick={() => props.dispatch(showAbout())}>
                 About 
               </button> 
             </Link> 
             <Link activeClass="active" className="Projects" to="Projects" spy={true} smooth={true} duration={800} >
-              <button className="button is-white navbar-item is-size-5" onClick={() => props.dispatch(showProjects())}>
+              <button className="button is-white navbar-item is-size-6" onClick={() => props.dispatch(showProjects())}>
                 Projects
               </button> 
             </Link> 
             <Link activeClass="active" className="Contact" to="Contact" spy={true} smooth={true} duration={800} >
-              <button className="button is-white navbar-item is-size-5" onClick={() => props.dispatch(showContact())}>
+              <button className="button is-white navbar-item is-size-6" onClick={() => props.dispatch(showContact())}>
                 Contact
               </button> 
             </Link> 

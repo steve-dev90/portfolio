@@ -4,7 +4,6 @@ import {Field, Control, Errors, Form, track} from 'react-redux-form'
 import {sendEmail} from '../actions/contact'
 
 const required = (val) => val && val.length
-//const maxLength = (len) => (val) => val.length <= len
 
 class ContactForm extends React.Component {
 
@@ -16,7 +15,7 @@ class ContactForm extends React.Component {
   handleSubmit (input) {
     console.log (input)  
     const {dispatch} = this.props
-    dispatch(sendEmail(input.name, 'akhds', input.email, 'sssssss'))
+    dispatch(sendEmail(input.name, input.message, input.email, input.message))
     //dispatch(actions.reset('item'))
   }
     
@@ -24,60 +23,106 @@ class ContactForm extends React.Component {
     return (
       <React.Fragment> 
         <Form model="message" onSubmit={this.handleSubmit}>
-            <div className="field">
-            <label>Name:</label>
-            <Control.text
-                model=".name"
-                validators={{
-                required
-                //maxLength: maxLength(15)
-                }}
-            />
-            <Errors
-                className="errors"
-                model=".name"
-                show="touched"
-                messages={{
-                required: 'Required'
-                //maxLength: 'Must be 15 characters or less',
-                }}
-            />
+          <div className="field">
+            <label className="label">Name:</label>
+              <div className="control">
+                <Control.text 
+                    model=".name" className="input"
+                    validators={{
+                    required
+                    }}
+                />
+                <Errors
+                    className="help has-text-info"
+                    model=".name"
+                    show="touched"
+                    messages={{
+                    required: 'Required'
+                    }}
+                />
+              </div>
+          </div>
+
+          <div className="field">
+            <label className="label">Subject:</label>
+              <div className="control">
+                <Control.text
+                    model=".subject" className="input"
+                    validators={{
+                    required
+                    }}
+                />
+                <Errors
+                    className="help has-text-info"
+                    model=".subject"
+                    show="touched"
+                    messages={{
+                    required: 'Required'
+                    }}
+                />
+              </div>
             </div>
 
+
             <div className="field">
-            <label>Email:</label>
-            <Control.text
-                model=".email"
-                validators={{
-                required,
-                validEmail: (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val),
-                }}
-            />
-            <Errors
-                className="errors"
-                model="user.email"
-                show="touched"
-                messages={{
-                required: 'Required',
-                validEmail: 'Invalid email address',
-                }}
-            />
+              <label className="label">Email:</label>
+              <div className="control has-icons-left">
+                <Control.text
+                    model=".email" className="input"
+                    validators={{
+                    required,
+                    validEmail: (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val),
+                    }}
+                />
+                <span className="icon is-small is-left">
+                  <i className="fa fa-envelope"></i>
+                </span>
+                <Errors
+                    className="help has-text-info"
+                    model=".email"
+                    show="touched"
+                    messages={{
+                    required: 'Required',
+                    validEmail: 'Invalid email address',
+                    }}
+                />
+              </div>
             </div>
-                        
-            <button type="submit">
-            Submit
-            </button>
+
+
+            <div className="field">
+              <label className="label">Message:</label>
+              <div className="control">
+                <Control.textarea
+                    model=".message" className="textarea"
+                    validators={{
+                    required
+                    }}
+                />
+                <Errors
+                    className="help has-text-info"
+                    model=".message"
+                    show="touched"
+                    messages={{
+                    required: 'Required',
+                    }}
+                />
+              </div>
+            </div>
+                    
+            <div className="control">        
+              <button className="button is-link" type="submit">
+                Submit
+              </button>
+            </div>
 
         </Form>
-
-      </React.Fragment>   
-    
+      </React.Fragment>      
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  //console.log(state)  
+const mapStateToProps = (state) => { 
   return {portfolio: state.portfolio}
 }
 

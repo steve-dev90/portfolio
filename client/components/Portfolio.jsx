@@ -6,10 +6,11 @@ import Nav from './Nav'
 import Header from './Header'
 import Hero from './Hero'
 import Contact from './Contact'
+import Footer from './Footer'
 
 const Portfolio = () => (
   <React.Fragment>
-    <nav className="navbar is-transparent is-size-4">
+    <nav className="navbar is-transparent is-size-4 is-fixed-top">
       <div className="container">
         <Nav />
       </div>
@@ -35,6 +36,11 @@ const Portfolio = () => (
         <Contact />
       </div>
     </section>
+    <footer className="footer pagefooter">
+      <div className="container">
+        <Footer />
+      </div>   
+    </footer>  
 
   </React.Fragment>
 )

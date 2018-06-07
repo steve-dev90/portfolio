@@ -16,9 +16,9 @@ class Projects extends React.Component {
 
     return (
       <React.Fragment>  
-        <div className="columns is-multiline">
+        <div className="columns is-centered is-multiline">
 
-          <div className="column is-11">
+          <div className="column is-7">
             <Element name="Projects" className="element content-title" >
               <h2 className="title is-2">Projects</h2>
             </Element>
@@ -29,23 +29,23 @@ class Projects extends React.Component {
             
             {this.props.portfolio.projectsDisplay 
             ?             
-            <button className="button is-white content-title" onClick={() => this.props.dispatch(hideProjects())}>
+            <button className="button is-white content-title is-pulled-right" onClick={() => this.props.dispatch(hideProjects())}>
               <span className="icon ">
-              <i className="fa fa-chevron-up" aria-hidden="true">
+              <i className="fa fa-chevron-up">
               </i>
               </span>
             </button> 
             :
-            <button className="button is-white content-title" onClick={() => this.props.dispatch(showProjects())}>
+            <button className="button is-white content-title is-pulled-right" onClick={() => this.props.dispatch(showProjects())}>
               <span className="icon ">
-              <i className="fa fa-chevron-down" aria-hidden="true"></i> 
+              <i className="fa fa-chevron-down"></i> 
               </span>
             </button>}           
      
           </div>
 
           {this.props.portfolio.projectsDisplay && 
-            this.props.projects.map(project => <Project project={project}/>)} 
+            this.props.projects.map(project => <Project key={project.id} project={project}/>)} 
       
         </div>
       </React.Fragment>   
