@@ -1,15 +1,17 @@
 //Based  on https://github.com/binhc/react-nodemailer
 
+require('dotenv').config()
+
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
-const creds = require('../config');
+//const creds = require('../config');
 
 var transport = {
-  host: 'smtp.gmail.com',
+  host: 'smtp.gmail.com', 
   auth: {
-    user: creds.USER || process.env.USER,
-    pass: creds.PASS || process.env.PASS
+    user: process.env.USERNAME,
+    pass: process.env.PASS
   }
 }
 
@@ -24,7 +26,8 @@ transporter.verify((error, success) => {
 });
 
 router.post('/', (req, res, next) => {
-  console.log('email', req.body)  
+  console.log('email', req.body) 
+  console.log('creds', process.env.USERNAME) 
   let name = req.body.name
   let subject = req.body.subject
   let email = req.body.email  
@@ -33,7 +36,7 @@ router.post('/', (req, res, next) => {
 
   let mail = {
     from: name,
-    to: creds.USER || process.env.USER,  
+    to: process.env.USERNAME,  
     subject: 'New Message from Contact Form',
     text: content
   }
