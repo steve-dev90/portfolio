@@ -1,10 +1,12 @@
 import {createForms} from 'react-redux-form'
 
-export const message = {
+export const form_message = {
   name: '',
-  email: ''
+  subject: '',
+  email: '',
+  message: ''
 }
 
 export default createForms({
-  message
+  form_message
 })

@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import { showContact, hideContact } from '../actions/portfolio'
 import { Link, Element } from 'react-scroll'
 import ContactForm from './ContactForm'
+import ContactFormSubmitted from './ContactFormSubmitted'
 
 class Contact extends React.Component {
 
@@ -11,7 +12,6 @@ class Contact extends React.Component {
     return (
       <React.Fragment>  
         <div className="columns is-centered is-multiline">
-
 
           <div className="column is-7">
           
@@ -26,13 +26,13 @@ class Contact extends React.Component {
             ?             
             <button className="button is-white content-title is-pulled-right" onClick={() => this.props.dispatch(hideContact())}>
               <span className="icon ">
-              <i className="fa fa-chevron-up"></i>
+                <i className="fa fa-chevron-up"></i>
               </span>
             </button> 
             :
             <button className="button is-white content-title is-pulled-right" onClick={() => this.props.dispatch(showContact())}>
               <span className="icon ">
-              <i className="fa fa-chevron-down"></i> 
+                <i className="fa fa-chevron-down"></i> 
               </span>
             </button>}                
           </div> 
@@ -40,7 +40,10 @@ class Contact extends React.Component {
           {this.props.portfolio.contactDisplay && 
           <div className="column is-5">             
             <div className="content is-size-6">
-              <ContactForm />      
+              {this.props.portfolio.contactFormDisplay 
+              ? <ContactForm />
+              : <ContactFormSubmitted />
+              }      
             </div>
           </div>}  
 

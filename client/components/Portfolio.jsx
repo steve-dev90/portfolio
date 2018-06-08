@@ -1,5 +1,4 @@
 import React from 'react'
-// import {connect} from 'react-redux'
 import About from './About'
 import Projects from './Projects'
 import Nav from './Nav'
@@ -45,9 +44,4 @@ const Portfolio = () => (
   </React.Fragment>
 )
 
-// const mapStateToProps = (state) => {
-//   return {greetings: state.greetings}
-// }
-
-// export default connect(mapStateToProps)(Greetings)
 export default Portfolio 

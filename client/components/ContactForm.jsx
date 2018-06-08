@@ -1,7 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Field, Control, Errors, Form, track} from 'react-redux-form'
+import {actions, Field, Control, Errors, Form, track} from 'react-redux-form'
 import {sendEmail} from '../actions/contact'
+import { hideContactForm } from '../actions/portfolio'
 
 const required = (val) => val && val.length
 
@@ -16,18 +17,19 @@ class ContactForm extends React.Component {
     console.log (input)  
     const {dispatch} = this.props
     dispatch(sendEmail(input.name, input.message, input.email, input.message))
-    //dispatch(actions.reset('item'))
+    dispatch(actions.reset('form_message'))
+    dispatch(hideContactForm())
   }
     
   render(props) {
     return (
       <React.Fragment> 
-        <Form model="message" onSubmit={this.handleSubmit}>
+        <Form model="form_message" onSubmit={this.handleSubmit}>
           <div className="field">
             <label className="label">Name:</label>
               <div className="control">
                 <Control.text 
-                    model=".name" className="input"
+                    model=".name" className="input has-background-white-ter"
                     validators={{
                     required
                     }}
@@ -47,7 +49,7 @@ class ContactForm extends React.Component {
             <label className="label">Subject:</label>
               <div className="control">
                 <Control.text
-                    model=".subject" className="input"
+                    model=".subject" className="input has-background-white-ter"
                     validators={{
                     required
                     }}
@@ -68,7 +70,7 @@ class ContactForm extends React.Component {
               <label className="label">Email:</label>
               <div className="control has-icons-left">
                 <Control.text
-                    model=".email" className="input"
+                    model=".email" className="input has-background-white-ter"
                     validators={{
                     required,
                     validEmail: (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val),
@@ -82,8 +84,8 @@ class ContactForm extends React.Component {
                     model=".email"
                     show="touched"
                     messages={{
-                    required: 'Required',
-                    validEmail: 'Invalid email address',
+                      required: 'Required\n',
+                      validEmail: 'Invalid email address',
                     }}
                 />
               </div>
@@ -94,7 +96,7 @@ class ContactForm extends React.Component {
               <label className="label">Message:</label>
               <div className="control">
                 <Control.textarea
-                    model=".message" className="textarea"
+                    model=".message" className="textarea has-background-white-ter"
                     validators={{
                     required
                     }}

@@ -33,3 +33,15 @@ export const hideContact = () => {
     type: 'HIDE_CONTACT'
   }
 }
+
+export const showContactForm = () => {
+  return {
+    type: 'SHOW_CONTACT_FORM'
+  }
+}
+
+export const hideContactForm = () => {
+  return {
+    type: 'HIDE_CONTACT_FORM'
+  }
+}

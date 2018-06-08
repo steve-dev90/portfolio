@@ -11,7 +11,6 @@ class About extends React.Component {
       <React.Fragment>  
         <div className="columns is-centered is-multiline">
 
-
           <div className="column is-7">          
             <Element name="About" className="element content-title" >
               <h2 className="title is-2 ">About Me</h2>
