@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
     table.increments('id')
     table.string('title')
     table.string('image')
-    table.string('copy')
+    table.string('copy',1000)
   })
 }
 
