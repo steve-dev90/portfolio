@@ -8,8 +8,8 @@ const creds = require('../config');
 var transport = {
   host: 'smtp.gmail.com',
   auth: {
-    user: creds.USER,
-    pass: creds.PASS
+    user: creds.USER || process.env.USER,
+    pass: creds.PASS || process.env.PASS
   }
 }
 
@@ -33,7 +33,7 @@ router.post('/', (req, res, next) => {
 
   let mail = {
     from: name,
-    to: creds.USER,  
+    to: creds.USER || process.env.USER,  
     subject: 'New Message from Contact Form',
     text: content
   }
