@@ -1,4 +1,4 @@
-//Based on https://github.com/binhc/react-nodemailer
+//Based  on https://github.com/binhc/react-nodemailer
 
 var express = require('express');
 var router = express.Router();
