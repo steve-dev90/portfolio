@@ -11,9 +11,9 @@ class Contact extends React.Component {
 
     return (
       <React.Fragment>  
-        <div className="columns is-centered is-multiline">
+        <div className="columns is-centered is-multiline is-mobile">
 
-          <div className="column is-7">
+          <div className="column is-10-mobile is-7-tablet is-7-desktop">
           
             <Element name="Contact" className="element content-title" >
               <h2 className="title is-2">Contact</h2>
@@ -25,20 +25,20 @@ class Contact extends React.Component {
             {this.props.portfolio.contactDisplay 
             ?             
             <button className="button is-white content-title is-pulled-right" onClick={() => this.props.dispatch(hideContact())}>
-              <span className="icon ">
+              <span className="icon title is-4">
                 <i className="fa fa-chevron-up"></i>
               </span>
             </button> 
             :
             <button className="button is-white content-title is-pulled-right" onClick={() => this.props.dispatch(showContact())}>
-              <span className="icon ">
+              <span className="icon title is-4">
                 <i className="fa fa-chevron-down"></i> 
               </span>
             </button>}                
           </div> 
 
           {this.props.portfolio.contactDisplay && 
-          <div className="column is-5">             
+          <div className="column is-8-mobile is-5-tablet is-5-desktop">             
             <div className="content is-size-6">
               {this.props.portfolio.contactFormDisplay 
               ? <ContactForm />

@@ -3,7 +3,7 @@ import React from 'react'
 const Project = (props) => (
   
   <React.Fragment> 
-    <div className="column is-8">
+    <div className="column is-11-mobile is-8-tablet is-8-desktop">
       <div className="content is-size-6">        
         <h3 className="title has-text-info">{props.project.title}</h3> 
 

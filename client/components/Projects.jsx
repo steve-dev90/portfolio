@@ -16,9 +16,9 @@ class Projects extends React.Component {
 
     return (
       <React.Fragment>  
-        <div className="columns is-centered is-multiline">
+        <div className="columns is-centered is-multiline is-mobile">
 
-          <div className="column is-7">
+          <div className="column is-10-mobile is-7-tablet is-7-desktop">
             <Element name="Projects" className="element content-title" >
               <h2 className="title is-2">Projects</h2>
             </Element>
@@ -30,14 +30,14 @@ class Projects extends React.Component {
             {this.props.portfolio.projectsDisplay 
             ?             
             <button className="button is-white content-title is-pulled-right" onClick={() => this.props.dispatch(hideProjects())}>
-              <span className="icon ">
+              <span className="icon title is-4">
               <i className="fa fa-chevron-up">
               </i>
               </span>
             </button> 
             :
             <button className="button is-white content-title is-pulled-right" onClick={() => this.props.dispatch(showProjects())}>
-              <span className="icon ">
+              <span className="icon title is-4">
               <i className="fa fa-chevron-down"></i> 
               </span>
             </button>}           
