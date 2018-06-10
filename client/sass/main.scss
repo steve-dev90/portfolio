@@ -23,3 +23,23 @@ $fa-font-path: '~font-awesome/fonts';
   font-weight: 400;
 }
 
+.hero-image {
+  background-image: url('/images/sketch2.jpg');
+  background-position: center;
+  background-size: 600px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60vh;
+}
+
+@media (min-width: 769px) {
+
+  .hero-image {
+    background-size: 748px  849px;
+	  background-attachment: fixed;
+    width: 70%;
+    height: 80vh;
+  }
+
+}

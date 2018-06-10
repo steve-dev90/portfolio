@@ -9,7 +9,7 @@ import Footer from './Footer'
 
 const Portfolio = () => (
   <React.Fragment>
-    <nav className="navbar is-transparent is-size-4">
+    <nav className="navbar is-transparent is-size-4 is-fixed-top">
       <div className="container">
         <Nav />
       </div>

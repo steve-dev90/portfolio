@@ -26,9 +26,11 @@ class Nav extends React.Component {
       <React.Fragment>
         <div className="navbar-brand">
 
-          <SocialIcons iconClass={"is-hidden-tablet is-hidden-desktop"} />
+          <SocialIcons iconClass={"is-hidden-desktop"} />
 
-          <button className="navbar-burger" onClick={() => this.burgerToggle()} >
+          <button className={this.state.burgerMenu ? 
+            "navbar-burger is-active": "navbar-burger" } 
+            onClick={() => this.burgerToggle()} >
             <span className="has-text-link"></span>
             <span className="has-text-link"></span>
             <span className="has-text-link"></span>
@@ -41,27 +43,27 @@ class Nav extends React.Component {
 
           
           <div className="navbar-end">
-            <SocialIcons iconClass={"is-hidden-mobile"} />
+            <SocialIcons iconClass={"is-hidden-touch"} />
 
             <div className="navbar-item has-dropdown is-hoverable">  
-              <div className="navbar-item is-hidden-mobile">
+              <div className="navbar-item is-hidden-touch">
                 <span className="icon title is-4">
                   <i className="fa fa-chevron-down has-text-link"></i>
                 </span>
               </div>
               <div className="navbar-dropdown is-boxed">
-                <Link activeClass="active" className="About" to="About" spy={true} smooth={true} duration={600} >
-                  <button className="button is-white navbar-item is-size-6 is-size-4-mobile is-inline-mobile" onClick={() => this.props.dispatch(showAbout())}>
+                <Link activeClass="active" className="About" to="About" offset={-50} spy={true} smooth={true} duration={600} >
+                  <button className="button is-white navbar-item is-size-6 is-size-4-touch is-inline-touch" onClick={() => this.props.dispatch(showAbout())}>
                     About 
                   </button> 
                 </Link> 
-                <Link activeClass="active" className="Projects" to="Projects" spy={true} smooth={true} duration={600} >
-                  <button className="button is-white navbar-item is-size-6 is-size-4-mobile is-inline-mobile" onClick={() => this.props.dispatch(showProjects())}>
+                <Link activeClass="active" className="Projects" to="Projects" offset={-50} spy={true} smooth={true} duration={600} >
+                  <button className="button is-white navbar-item is-size-6 is-size-4-touch is-inline-touch" onClick={() => this.props.dispatch(showProjects())}>
                     Projects
                   </button> 
                 </Link> 
-                <Link activeClass="active" className="Contact" to="Contact" spy={true} smooth={true} duration={600} >
-                  <button className="button is-white navbar-item is-size-6 is-size-4-mobile is-inline-mobile" onClick={() => this.props.dispatch(showContact())}>
+                <Link activeClass="active" className="Contact" to="Contact"  offset={-50} spy={true} smooth={true} duration={600} >
+                  <button className="button is-white navbar-item is-size-6 is-size-4-touch is-inline-touch" onClick={() => this.props.dispatch(showContact())}>
                     Contact
                   </button> 
                 </Link> 

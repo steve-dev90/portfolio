@@ -40,6 +40,7 @@ class Contact extends React.Component {
           {this.props.portfolio.contactDisplay && 
           <div className="column is-8-mobile is-5-tablet is-5-desktop">             
             <div className="content is-size-6">
+              <p>Interested in working with me? If so, send me a message.</p>
               {this.props.portfolio.contactFormDisplay 
               ? <ContactForm />
               : <ContactFormSubmitted />
