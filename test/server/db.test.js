@@ -1,7 +1,7 @@
 const request = require('supertest')
 
 const env = require('./test-environment')
-const greetingsDb = require('../../server/db/greeting')
+const projectsDb = require('../../server/db/projects')
 
 // Manage the test database
 
@@ -14,10 +14,10 @@ afterEach(() => env.cleanup(testDb))
 
 // Tests
 
-test('read greetings db', () => {
-  return greetingsDb.getGreetings(testDb)
-    .then(greetings => {
-      expect(greetings.length).toBe(3)
-      expect(greetings[0].hasOwnProperty('text')).toBeTruthy()
+test('read projects db', () => {
+  return projectsDb.getProjects(testDb)
+    .then(projects => {
+      expect(projects.length).toBe(2)
+      expect(projects[0].hasOwnProperty('image')).toBeTruthy()
     })
 })
