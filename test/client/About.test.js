@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 
-import {Greetings} from '../../client/components/Greetings'
+import {About} from '../../client/components/About'
 import './setup-dom'
 
 import {Provider} from 'react-redux'

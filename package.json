@@ -25,7 +25,6 @@
   "author": "EDA",
   "license": "ISC",
   "devDependencies": {
-    "enzyme": "^2.8.2",
     "jest": "^21.2.1",
     "nodemon": "^1.11.0",
     "sqlite3": "^3.1.8",
@@ -43,6 +42,8 @@
     "cors": "^2.8.3",
     "css-loader": "^0.28.10",
     "dotenv": "^6.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "express": "^4.14.0",
     "file-loader": "^1.1.11",
     "font-awesome": "^4.7.0",
