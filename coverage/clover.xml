@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1529121331583" clover="3.2.0">
-  <project timestamp="1529121331583" name="All files">
-    <metrics statements="11" coveredstatements="9" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2" elements="19" coveredelements="13" complexity="0" loc="11" ncloc="11" packages="2" files="2" classes="2">
+<coverage generated="1529281125452" clover="3.2.0">
+  <project timestamp="1529281125452" name="All files">
+    <metrics statements="11" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="3" elements="19" coveredelements="17" complexity="0" loc="11" ncloc="11" packages="2" files="2" classes="2">
       <package name="client.components">
-        <metrics statements="5" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
+        <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="3"/>
         <file name="About.jsx" path="/Users/stevetorrens/workspace/portfolio/client/components/About.jsx">
-          <metrics statements="5" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
-          <line num="9" count="1" type="stmt"/>
+          <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="3"/>
+          <line num="9" count="2" type="stmt"/>
           <line num="24" count="0" type="stmt"/>
-          <line num="30" count="0" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
           <line num="57" count="1" type="stmt"/>
-          <line num="58" count="1" type="stmt"/>
+          <line num="58" count="2" type="stmt"/>
         </file>
       </package>
       <package name="test.client">
