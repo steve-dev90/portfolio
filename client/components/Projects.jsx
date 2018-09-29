@@ -45,7 +45,9 @@ class Projects extends React.Component {
           </div>
 
           {this.props.portfolio.projectsDisplay && 
-            this.props.projects.map(project => <Project key={project.id} project={project}/>)} 
+            this.props.projects
+              .filter(project => !project.old_project)
+              .map(project => <Project key={project.id} project={project}/>)} 
       
         </div>
       </React.Fragment>   
@@ -55,7 +57,7 @@ class Projects extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  //console.log('Projects',state)  
+  console.log('Projects',state)  
   return {
     portfolio: state.portfolio,
     projects: state.projects

@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn test AboutConnected
+  /usr/local/bin/node /usr/local/bin/yarn knex migrate:make
 
 PATH: 
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin
+  /Users/stevetorrens/bin:/Users/stevetorrens/.rvm/gems/ruby-2.4.1/bin:/Users/stevetorrens/.rvm/gems/ruby-2.4.1@global/bin:/Users/stevetorrens/.rvm/rubies/ruby-2.4.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/stevetorrens/.rvm/bin
 
 Yarn version: 
   1.5.1
@@ -82,7 +82,7 @@ npm manifest:
       "redux-thunk": "^2.2.0",
       "sass-loader": "^7.0.1",
       "style-loader": "^0.20.3",
-      "superagent": "^2.2.0",
+      "superagent": "^3.7.0",
       "url-loader": "^1.0.1",
       "webpack": "^2.3.3",
       "webpack-dev-server": "^2.4.2"
@@ -7701,7 +7701,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c jest AboutConnected
+  Arguments: -c knex migrate:make
   Directory: /Users/stevetorrens/workspace/portfolio
   Output:
   
