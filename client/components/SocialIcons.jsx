@@ -3,6 +3,11 @@ import React from 'react'
 const SocialIcons = (props) => (
   <React.Fragment>  
     <div className={`navbar-item ${props.iconClass}`}>
+      <a href="https://gitlab.com/stevetorrens"><span className="icon">
+        <i className="fa fa-gitlab"></i>
+      </span></a>  
+    </div>
+    <div className={`navbar-item ${props.iconClass}`}>
       <a href="https://github.com/steve-dev90"><span className="icon">
         <i className="fa fa-github"></i>
       </span></a>  
