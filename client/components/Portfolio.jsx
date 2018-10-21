@@ -20,17 +20,17 @@ const Portfolio = () => (
     <section className="hero is-light"> 
       <Hero /> 
     </section>          
-    <section className="About">
+    <section className="About sub-title">
       <div className="container">
         <About />
       </div>
     </section>
-    <section className="Projects">
+    <section className="Projects sub-title">
       <div className="container">
         <Projects />
       </div>
     </section>
-    <section className="Contact">
+    <section className="Contact sub-title">
       <div className="container">
         <Contact />
       </div>

@@ -10,27 +10,43 @@ $fa-font-path: '~font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome.scss';
 
 
-.content-title {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-}
+// .content-title {
+//   margin-top: 3rem;
+//   margin-bottom: 1rem;
+// }
 
 .pagefooter {
   margin-top: 15rem;
 }
 
 .title {
-  font-weight: 400;
+  font-weight: 300;
+}
+
+.header {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.hero-image-container {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.sub-title {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-image {
-  background-image: url('/images/sketch2.jpg');
+  background-image: url('/images/sketch3.jpg');
   background-position: center;
   background-size: 600px;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  // background-position-y: 150px;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
 }
 
 @media (min-width: 769px) {
