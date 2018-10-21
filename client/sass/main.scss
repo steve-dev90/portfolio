@@ -9,19 +9,19 @@ $fa-font-path: '~font-awesome/fonts';
 
 @import '~font-awesome/scss/font-awesome.scss';
 
-
-// .content-title {
-//   margin-top: 3rem;
-//   margin-bottom: 1rem;
-// }
-
 .pagefooter {
   margin-top: 15rem;
 }
 
 .burger {
   border: 0rem;
+  
 }
+
+.burger:focus {
+  outline: 0;
+}
+
 
 .burger-container {
   float: right;

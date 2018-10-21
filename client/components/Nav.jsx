@@ -25,21 +25,16 @@ class Nav extends React.Component {
     return (
       <React.Fragment>
         <div className="navbar-brand">
-
           <SocialIcons iconClass={"is-hidden-desktop"} />
-        </div>  
-          <div className="navbar-item is-hidden-desktop burger-container">
-            <button  className="burger" onClick={() => this.burgerToggle()} >
-              {/* <span className="has-text-link"></span>
-              <span className="has-text-link"></span>
-              <span className="has-text-link"></span> */}
-              <span className="icon title is-4">
-                <i className="fa fa-bars has-text-link"></i>
-              </span>
-            </button>
-          </div>
+        </div> 
 
-
+        <div className="navbar-item is-hidden-desktop burger-container">
+          <button  className="burger" onClick={() => this.burgerToggle()} >
+            <span className="icon title is-4">
+              <i className="fa fa-bars has-text-link"></i>
+            </span>
+          </button>
+        </div>
 
         <div className={this.state.burgerMenu ? "navbar-menu is-active": "navbar-menu" }> 
          
