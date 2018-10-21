@@ -27,21 +27,22 @@ class Nav extends React.Component {
         <div className="navbar-brand">
 
           <SocialIcons iconClass={"is-hidden-desktop"} />
+        </div>  
+          <div className="navbar-item is-hidden-desktop burger-container">
+            <button  className="burger" onClick={() => this.burgerToggle()} >
+              {/* <span className="has-text-link"></span>
+              <span className="has-text-link"></span>
+              <span className="has-text-link"></span> */}
+              <span className="icon title is-4">
+                <i className="fa fa-bars has-text-link"></i>
+              </span>
+            </button>
+          </div>
 
-          <button className={this.state.burgerMenu ? 
-            "navbar-burger is-active": "navbar-burger" } 
-            onClick={() => this.burgerToggle()} >
-            <span className="has-text-link"></span>
-            <span className="has-text-link"></span>
-            <span className="has-text-link"></span>
-          </button>
-
-        </div>
 
 
         <div className={this.state.burgerMenu ? "navbar-menu is-active": "navbar-menu" }> 
-
-          
+         
           <div className="navbar-end">
             <SocialIcons iconClass={"is-hidden-touch"} />
 
