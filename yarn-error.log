@@ -68,7 +68,7 @@ npm manifest:
       "knex": "^0.13.0",
       "nock": "^9.2.5",
       "node-sass": "^4.7.2",
-      "nodemailer": "^4.6.5",
+      "nodemailer": "^4.6.8",
       "pg": "^6.2.3",
       "react": "^16.3.2",
       "react-dom": "^16.3.2",
@@ -4845,9 +4845,9 @@ Lockfile:
       stdout-stream "^1.4.0"
       "true-case-path" "^1.0.2"
   
-  nodemailer@^4.6.5:
-    version "4.6.5"
-    resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-4.6.5.tgz#306ce18c4543f3f06e5f76665d3cb6277f872f53"
+  nodemailer@^4.6.8:
+    version "4.6.8"
+    resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-4.6.8.tgz#f82fb407828bf2e76d92acc34b823d83e774f89c"
   
   nodemon@^1.11.0:
     version "1.17.3"
