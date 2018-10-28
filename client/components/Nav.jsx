@@ -18,7 +18,6 @@ class Nav extends React.Component {
     this.setState ({
       burgerMenu : !this.state.burgerMenu
     })
-
   }
 
   render() { 
