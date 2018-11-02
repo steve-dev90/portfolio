@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn dev
+  /usr/local/bin/node /usr/local/bin/yarn knex seed:run
 
 PATH: 
   /Users/stevetorrens/bin:/Users/stevetorrens/.rvm/gems/ruby-2.4.1/bin:/Users/stevetorrens/.rvm/gems/ruby-2.4.1@global/bin:/Users/stevetorrens/.rvm/rubies/ruby-2.4.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/stevetorrens/.rvm/bin
@@ -7694,10 +7694,10 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit signal: SIGHUP
+  Exit code: 127
   Command: sh
-  Arguments: -c nodemon --watch server & webpack --watch
-  Directory: /Users/stevetorrens/workspace/portfolio
+  Arguments: -c knex seed:run
+  Directory: /Users/stevetorrens/workspace/portfolio-cosfix/portfolio
   Output:
   
       at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
