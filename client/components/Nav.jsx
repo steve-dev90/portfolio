@@ -4,6 +4,7 @@ import { showAbout, showProjects, showContact } from '../actions/portfolio'
 import { Link } from 'react-scroll'
 import SocialIcons from './SocialIcons'
 import ReactModal from 'react-modal'
+import Modal from './Modal'
 
 class Nav extends React.Component {
 
@@ -50,7 +51,7 @@ class Nav extends React.Component {
             className="Modal"
             overlayClassName="Overlay"
           >
-            <p>Modal text!</p>
+            <Modal /> 
             <button onClick={this.handleCloseModal}>Close Modal</button>
           </ReactModal>
         </div>
