@@ -12,9 +12,9 @@ exports.seed = function(knex, Promise) {
           { para: "Square of Pointlessness was my final exercise for bootcamp prep. I used native Javascript to animate a square." }
         ]), old_project: true},
         {id: 3, title: "CompareBear Australia", image: 'Comparebear.png', copy: JSON.stringify([
-          { para: "My work for a small start-up called Glimp. This is there Australian utilities comparison website." }, 
+          { para: "My work for a small start-up called Glimp. This is their Australian utilities comparison website." }, 
           { para: "I developed internal APIs and the backend database to deliver utilities comparison search results." },
-          { para: "Glimp's used a Ruby on Rails and Javascript - Jquery technology stack." }
+          { para: "This app uses a Ruby on Rails and Javascript - Jquery stack." }
         ]), old_project: false},          
       ])
     })
