@@ -44,7 +44,7 @@ class About extends React.Component {
                 have experience in developing small applications in JavaScript and associated web technologies. 
                 You can see examples of my Code on <a href="https://github.com/steve-dev90">github</a>.</p>
 
-                <p>I am now available for work, If you need to know more get in touch with me.</p>       
+                <p>I am now available for work. If you need to know more get in touch with me.</p>       
               </div>
             </div>}    
 
