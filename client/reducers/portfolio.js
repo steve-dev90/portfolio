@@ -66,11 +66,13 @@ function portfolio (state = initialPortfolio, action) {
                 } 
       case 'OPEN_MODAL':
         return {
-                showModal: true
+                showModal: true,
+                contactFormDisplay : true
                 }          
       case 'CLOSE_MODAL':
         return {
-                showModal: false
+                showModal: false,
+                contactFormDisplay : true
                 }                       
       default:
         return state

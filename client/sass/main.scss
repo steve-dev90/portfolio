@@ -75,10 +75,10 @@ $fa-font-path: '~font-awesome/fonts';
 .Modal {
   z-index: 200;
   position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  bottom: 40px;
+  top: 5px;
+  
+  right: 0px;
+ 
   background-color: papayawhip;
 }
 
@@ -89,5 +89,5 @@ $fa-font-path: '~font-awesome/fonts';
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rebeccapurple;
+  background-color: rgba(0,0,0,0.5)
 }
