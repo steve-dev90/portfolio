@@ -1,9 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { showAbout, showProjects, showContact } from '../actions/portfolio'
+import { showAbout, showProjects, showContact, handleOpenModal } from '../actions/portfolio'
 import { Link } from 'react-scroll'
 import SocialIcons from './SocialIcons'
-import ReactModal from 'react-modal'
+
 import Modal from './Modal'
 
 class Nav extends React.Component {
@@ -12,23 +12,12 @@ class Nav extends React.Component {
     super(props)
     this.state = {
       burgerMenu : false,
-      showModal : false
     }
     this.burgerToggle = this.burgerToggle.bind(this)
-    this.handleOpenModal = this.handleOpenModal.bind(this)
-    this.handleCloseModal = this.handleCloseModal.bind(this)
   }
     
   burgerToggle () {
     this.setState ({ burgerMenu : !this.state.burgerMenu })
-  }
-
-  handleOpenModal () {
-    this.setState ({ showModal: true })
-  }
-  
-  handleCloseModal () {
-    this.setState({ showModal: false })
   }
 
   render() { 
@@ -39,22 +28,14 @@ class Nav extends React.Component {
         </div> 
 
         <div className="navbar-item is-hidden-desktop burger-container">
-          <button  className="burger" onClick={this.handleOpenModal} >
+          <button  className="burger" onClick={() => this.props.dispatch(handleOpenModal())} >
             <span className="icon title is-4">
               <i className="fa fa-bars has-text-link"></i>
             </span>
-          </button>
-          <ReactModal 
-            isOpen={this.state.showModal}
-            contentLabel="onRequestClose Example"
-            onRequestClose={this.handleCloseModal}
-            className="Modal"
-            overlayClassName="Overlay"
-          >
-            <Modal /> 
-            <button onClick={this.handleCloseModal}>Close Modal</button>
-          </ReactModal>
+          </button>           
         </div>
+
+        <Modal /> 
 
         <div className={this.state.burgerMenu ? "navbar-menu is-active": "navbar-menu" }> 
          
