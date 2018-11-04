@@ -1,23 +1,23 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { showAbout, showProjects, showContact } from '../actions/portfolio'
-import { Link, Element } from 'react-scroll'
+import { showAbout, showProjects, showContact, handleOpenModal } from '../actions/portfolio'
+import { Link } from 'react-scroll'
 import SocialIcons from './SocialIcons'
+
+import Modal from './Modal'
 
 class Nav extends React.Component {
 
   constructor (props) {
     super(props)
     this.state = {
-      burgerMenu : false
+      burgerMenu : false,
     }
     this.burgerToggle = this.burgerToggle.bind(this)
   }
     
   burgerToggle () {
-    this.setState ({
-      burgerMenu : !this.state.burgerMenu
-    })
+    this.setState ({ burgerMenu : !this.state.burgerMenu })
   }
 
   render() { 
@@ -28,12 +28,14 @@ class Nav extends React.Component {
         </div> 
 
         <div className="navbar-item is-hidden-desktop burger-container">
-          <button  className="burger" onClick={() => this.burgerToggle()} >
+          <button  className="burger" onClick={() => this.props.dispatch(handleOpenModal())} >
             <span className="icon title is-4">
               <i className="fa fa-bars has-text-link"></i>
             </span>
-          </button>
+          </button>           
         </div>
+
+        <Modal /> 
 
         <div className={this.state.burgerMenu ? "navbar-menu is-active": "navbar-menu" }> 
          
@@ -63,7 +65,6 @@ class Nav extends React.Component {
                   </button> 
                 </Link> 
               </div>
-
             </div>
           </div>
 

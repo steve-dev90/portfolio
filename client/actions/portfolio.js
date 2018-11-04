@@ -45,3 +45,16 @@ export const hideContactForm = () => {
     type: 'HIDE_CONTACT_FORM'
   }
 }
+
+export const handleOpenModal = () => {
+  console.log("LLLLL")
+  return {
+    type: 'OPEN_MODAL'
+  }
+}
+
+export const handleCloseModal = () => {
+  return {
+    type: 'CLOSE_MODAL'
+  }
+}

@@ -21,8 +21,7 @@ class Projects extends React.Component {
           <div className="column is-10-mobile is-7-tablet is-7-desktop">
             <Element name="Projects" className="element content-title" >
               <h2 className="title is-2">Projects</h2>
-            </Element>
-       
+            </Element>       
           </div>
 
           <div className="column is-1">

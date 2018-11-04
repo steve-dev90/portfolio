@@ -15,13 +15,12 @@ $fa-font-path: '~font-awesome/fonts';
 
 .burger {
   border: 0rem;
-  
+  background-color: white; 
 }
 
 .burger:focus {
   outline: 0;
 }
-
 
 .burger-container {
   float: right;
@@ -70,4 +69,43 @@ $fa-font-path: '~font-awesome/fonts';
     height: 80vh;
   }
 
+}
+
+.Modal {
+  z-index: 200;
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  width: 50%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.Modal:focus{
+  outline: none;
+}
+
+.modal-item {
+  font-size: 1.9rem;
+  color: white;
+  padding-left: 2rem;
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 1.0rem;
+  background-color: hsl(204, 86%, 53%);
+  border: 0rem;
+}
+
+.modal-item:focus{
+  outline: 0;
+}
+
+.Overlay {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5)
 }

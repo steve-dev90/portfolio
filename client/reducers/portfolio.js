@@ -2,7 +2,8 @@ const initialPortfolio ={
   aboutDisplay : false,
   projectsDisplay : false,
   contactDisplay : false,
-  contactFormDisplay : true
+  contactFormDisplay : true,
+  showModal : false
 }
 
 function portfolio (state = initialPortfolio, action) {
@@ -62,7 +63,17 @@ function portfolio (state = initialPortfolio, action) {
                 aboutDisplay: state.aboutDisplay,
                 contactDisplay : state.contactDisplay,
                 contactFormDisplay : false
-                }                   
+                } 
+      case 'OPEN_MODAL':
+        return {
+                showModal: true,
+                contactFormDisplay : true
+                }          
+      case 'CLOSE_MODAL':
+        return {
+                showModal: false,
+                contactFormDisplay : true
+                }                       
       default:
         return state
     }
