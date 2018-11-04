@@ -14,8 +14,7 @@ $fa-font-path: '~font-awesome/fonts';
 }
 
 .burger {
-  border: 0rem;
-  
+  border: 0rem; 
 }
 
 .burger:focus {
@@ -76,10 +75,29 @@ $fa-font-path: '~font-awesome/fonts';
   z-index: 200;
   position: absolute;
   top: 5px;
-  
   right: 0px;
- 
-  background-color: papayawhip;
+  width: 50%;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.Modal:focus{
+  outline: none;
+}
+
+.modal-item {
+  font-size: 1.9rem;
+  color: white;
+  padding-left: 2rem;
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 1.0rem;
+  background-color: hsl(204, 86%, 53%);
+  border: 0rem;
+}
+
+.modal-item:focus{
+  outline: 0;
 }
 
 .Overlay {

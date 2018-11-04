@@ -14,22 +14,25 @@ class Modal extends React.Component {
           isOpen={this.props.portfolio.showModal}
           contentLabel="onRequestClose Example"
           onRequestClose={this.handleCloseModal}
-          className="Modal"
+          shouldCloseOnOverlayClick={true}
+          className="Modal has-background-info"
           overlayClassName="Overlay"
           >
-            <button className ="is-pulled-right" onClick={() => this.props.dispatch(handleCloseModal())}>Close Modal</button>
+            <button className="button is-white is-pulled-right has-background-info" onClick={() => this.props.dispatch(handleCloseModal())}>
+              <span className="icon has-text-white is-size-6"><i className="fa fa-times"></i></span>
+            </button>
             <Link activeClass="active" className="About" to="About" offset={-50} spy={true} smooth={true} duration={600} >
-              <button className="button is-white is-large is-fullwidth" onClick={() => this.props.dispatch(showAbout())}>
+              <button className="modal-item" onClick={() => this.props.dispatch(showAbout())}>
                 About 
               </button> 
             </Link> 
             <Link activeClass="active" className="Projects" to="Projects" offset={-50} spy={true} smooth={true} duration={600} >
-              <button className="button is-white is-large is-fullwidth" onClick={() => this.props.dispatch(showProjects())}>
+              <button className="modal-item" onClick={() => this.props.dispatch(showProjects())}>
                 Projects
               </button> 
             </Link> 
             <Link activeClass="active" className="Contact" to="Contact"  offset={-50} spy={true} smooth={true} duration={600} >
-              <button className="button is-white is-large is-fullwidth" onClick={() => this.props.dispatch(showContact())}>
+              <button className="modal-item" onClick={() => this.props.dispatch(showContact())}>
                 Contact
               </button> 
             </Link> 
