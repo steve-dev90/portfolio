@@ -6,6 +6,15 @@ import ReactModal from 'react-modal'
 
 class Modal extends React.Component {
 
+  constructor () {
+    super()   
+    this.handleCloseModal = this.handleCloseModal.bind(this)
+  }
+  
+  handleCloseModal () {
+    this.props.dispatch(handleCloseModal())
+  }
+
   render() { 
     return (      
       <React.Fragment>
