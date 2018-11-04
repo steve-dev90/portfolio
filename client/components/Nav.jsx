@@ -65,7 +65,6 @@ class Nav extends React.Component {
                   </button> 
                 </Link> 
               </div>
-
             </div>
           </div>
 
