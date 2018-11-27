@@ -35,7 +35,7 @@ router.post('/', (req, res, next) => {
   let content = ` name: ${name}\n subject: ${subject}\n email: ${email}\n  message: ${message} `
 
   let mail = {
-    from: 'process.env.USERNAME',
+    from: 'app95715829@heroku.com',
     to: 'contactstorrens@gmail.com',  
     subject: 'New Message from Contact Form',
     text: content
