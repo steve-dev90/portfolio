@@ -10,8 +10,8 @@ var nodemailer = require('nodemailer');
 var transport = {
   host: 'smtp.sendgrid.net', 
   auth: {
-    user: process.env.USERNAME,
-    pass: process.env.PASS
+    user: process.env.SENDGRID_USERNAME,
+    pass: process.env.SENDGRID_PASSWORD
   }
 }
 
