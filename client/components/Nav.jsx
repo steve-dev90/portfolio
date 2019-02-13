@@ -1,10 +1,13 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { showAbout, showProjects, showContact, handleOpenModal } from '../actions/portfolio'
-import { Link } from 'react-scroll'
+// import { Link } from 'react-scroll'
+import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import SocialIcons from './SocialIcons'
 
 import Modal from './Modal'
+
+// Id burgerToggle required?
 
 class Nav extends React.Component {
 
@@ -15,63 +18,48 @@ class Nav extends React.Component {
     }
     this.burgerToggle = this.burgerToggle.bind(this)
   }
-    
+
   burgerToggle () {
     this.setState ({ burgerMenu : !this.state.burgerMenu })
   }
 
-  render() { 
+  render() {
     return (
       <React.Fragment>
         <div className="navbar-brand">
           <SocialIcons iconClass={"is-hidden-desktop"} />
-        </div> 
+        </div>
 
         <div className="navbar-item is-hidden-desktop burger-container">
           <button  className="burger" onClick={() => this.props.dispatch(handleOpenModal())} >
             <span className="icon title is-4">
               <i className="fa fa-bars has-text-link"></i>
             </span>
-          </button>           
+          </button>
         </div>
 
-        <Modal /> 
+        {/* <Modal /> */}
 
-        <div className={this.state.burgerMenu ? "navbar-menu is-active": "navbar-menu" }> 
-         
+        <div className={this.state.burgerMenu ? "navbar-menu is-active": "navbar-menu" }>
           <div className="navbar-end">
-            <SocialIcons iconClass={"is-hidden-touch"} />
-
-            <div className="navbar-item has-dropdown is-hoverable">  
-              <div className="navbar-item is-hidden-touch">
-                <span className="icon title is-4">
-                  <i className="fa fa-chevron-down has-text-link"></i>
-                </span>
-              </div>
-              <div className="navbar-dropdown is-boxed">
-                <Link activeClass="active" className="About" to="About" offset={-50} spy={true} smooth={true} duration={600} >
-                  <button className="button is-white navbar-item is-size-6 is-size-4-touch is-inline-touch" onClick={() => this.props.dispatch(showAbout())}>
-                    About 
-                  </button> 
-                </Link> 
-                <Link activeClass="active" className="Projects" to="Projects" offset={-50} spy={true} smooth={true} duration={600} >
-                  <button className="button is-white navbar-item is-size-6 is-size-4-touch is-inline-touch" onClick={() => this.props.dispatch(showProjects())}>
-                    Projects
-                  </button> 
-                </Link> 
-                <Link activeClass="active" className="Contact" to="Contact"  offset={-50} spy={true} smooth={true} duration={600} >
-                  <button className="button is-white navbar-item is-size-6 is-size-4-touch is-inline-touch" onClick={() => this.props.dispatch(showContact())}>
-                    Contact
-                  </button> 
-                </Link> 
-              </div>
-            </div>
+            {/* <Link activeClass="active" className="Projects" to="Projects" offset={-50} spy={true} smooth={true} duration={600} >
+              <a className="navbar-item is-uppercase is-hidden-touch is-size-7" onClick={() => this.props.dispatch(showProjects())}>
+                Projects
+              </a>
+            </Link> */}
+            <Link className="navbar-item is-uppercase is-hidden-touch is-size-7" onClick={() => this.props.dispatch(showProjects())} to="./projects">Projects</ Link>
+            <Link className="navbar-item is-uppercase is-hidden-touch is-size-7" onClick={() => this.props.dispatch(showAbout())} to="./about">About</ Link>
+            <Link className="navbar-item is-uppercase is-hidden-touch is-size-7" onClick={() => this.props.dispatch(showContact())} to="./contact">Contact</ Link>
+            {/* <Link activeClass="active" className="Contact" to="Contact"  offset={-50} spy={true} smooth={true} duration={600} >
+              <a className="navbar-item is-uppercase is-hidden-touch is-size-7" onClick={() => this.props.dispatch(showContact())}>
+                Contact
+              </a>
+            </Link> */}
           </div>
-
         </div>
 
-      </React.Fragment> 
-  )} 
+      </React.Fragment>
+  )}
 }
 
 export default connect()(Nav)

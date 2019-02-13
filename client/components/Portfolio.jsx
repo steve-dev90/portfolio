@@ -13,18 +13,18 @@ const Portfolio = () => (
       <div className="container">
         <Nav />
       </div>
-    </nav>  
-    <section className="hero is-info"> 
-      <Header /> 
-    </section> 
-    <section className="hero is-light"> 
-      <Hero /> 
-    </section>          
-    <section className="About sub-title">
+    </nav>
+    <section className="hero is-info">
+      <Header />
+    </section>
+    <section className="hero is-light">
+      <Hero />
+    </section>
+    {/* <section className="About sub-title">
       <div className="container">
         <About />
       </div>
-    </section>
+    </section> */}
     <section className="Projects sub-title">
       <div className="container">
         <Projects />
@@ -38,10 +38,9 @@ const Portfolio = () => (
     <footer className="footer pagefooter">
       <div className="container">
         <Footer />
-      </div>   
-    </footer>  
-
+      </div>
+    </footer>
   </React.Fragment>
 )
 
-export default Portfolio 
+export default Portfolio

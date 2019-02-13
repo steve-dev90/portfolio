@@ -47,7 +47,6 @@ export const hideContactForm = () => {
 }
 
 export const handleOpenModal = () => {
-  console.log("LLLLL")
   return {
     type: 'OPEN_MODAL'
   }
