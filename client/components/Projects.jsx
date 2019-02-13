@@ -1,66 +1,41 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { showProjects, hideProjects } from '../actions/portfolio';
-import { Link, Element } from 'react-scroll'
-import Project from './Project' 
-
+import Project from './Project'
+import Nav from './Nav'
 import {getProjects} from '../actions/projects'
 
 class Projects extends React.Component {
 
   componentDidMount() {
-    this.props.dispatch(getProjects()) 
+    this.props.dispatch(getProjects())
   }
 
   render(props) {
 
     return (
-      <React.Fragment>  
-        <div className="columns is-centered is-multiline is-mobile">
-
-          <div className="column is-10-mobile is-7-tablet is-7-desktop">
-            <Element name="Projects" className="element content-title" >
-              <h2 className="title is-2">Projects</h2>
-            </Element>       
+      <React.Fragment>
+        <Nav />
+        <section className="Projects sub-title">
+          <div className="container">
+            <div className="columns is-centered is-multiline is-mobile">
+              <div className="column is-11-mobile is-8-tablet is-8-desktop">
+                <h2 className="title is-2">Projects</h2>
+              </div>
+              {this.props.projects
+                .filter(project => !project.old_project)
+                .map(project => <Project key={project.id} project={project}/>)}
+            </div>
           </div>
-
-          <div className="column is-1">
-            
-            {this.props.portfolio.projectsDisplay 
-            ?             
-            <button className="button is-white content-title is-pulled-right" onClick={() => this.props.dispatch(hideProjects())}>
-              <span className="icon title is-4">
-              <i className="fa fa-chevron-up">
-              </i>
-              </span>
-            </button> 
-            :
-            <button className="button is-white content-title is-pulled-right" onClick={() => this.props.dispatch(showProjects())}>
-              <span className="icon title is-4">
-              <i className="fa fa-chevron-down"></i> 
-              </span>
-            </button>}           
-     
-          </div>
-
-          {this.props.portfolio.projectsDisplay && 
-            this.props.projects
-              .filter(project => !project.old_project)
-              .map(project => <Project key={project.id} project={project}/>)} 
-      
-        </div>
-      </React.Fragment>   
-    
+        </section>
+      </React.Fragment>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log('Projects',state)  
   return {
-    portfolio: state.portfolio,
     projects: state.projects
   }
 }
 
-export default connect(mapStateToProps)(Projects) 
+export default connect(mapStateToProps)(Projects)
