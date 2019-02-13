@@ -1,5 +1,4 @@
 import React from 'react'
-import Projects from './Projects'
 import Nav from './Nav'
 import Header from './Header'
 import Hero from './Hero'
@@ -14,12 +13,6 @@ const Portfolio = () => (
     </section>
     <section className="hero is-light">
       <Hero />
-    </section>
-
-    <section className="Projects sub-title">
-      <div className="container">
-        <Projects />
-      </div>
     </section>
     <section className="Contact sub-title">
       <div className="container">
