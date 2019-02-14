@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { showAbout, showProjects, showContact, handleOpenModal } from '../actions/portfolio'
+import { handleOpenModal } from '../actions/portfolio'
 // import { Link } from 'react-scroll'
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import SocialIcons from './SocialIcons'
@@ -29,6 +29,7 @@ class Nav extends React.Component {
         <nav className="navbar is-transparent is-size-4 is-fixed-top">
           <div className="container">
             <div className="navbar-brand">
+              <h1 className="navbar-item is-uppercase is-size-4">Steve Torrens</h1>
               <SocialIcons iconClass={"is-hidden-desktop"} />
             </div>
 
@@ -45,9 +46,9 @@ class Nav extends React.Component {
             <div className={this.state.burgerMenu ? "navbar-menu is-active": "navbar-menu" }>
               <div className="navbar-end">
                 <Link className="navbar-item is-uppercase is-hidden-touch is-size-7" to="./">Home</ Link>
-                <Link className="navbar-item is-uppercase is-hidden-touch is-size-7" onClick={() => this.props.dispatch(showProjects())} to="./projects">Projects</ Link>
+                <Link className="navbar-item is-uppercase is-hidden-touch is-size-7" to="./projects">Projects</ Link>
                 <Link className="navbar-item is-uppercase is-hidden-touch is-size-7" to="./about">About</ Link>
-                <Link className="navbar-item is-uppercase is-hidden-touch is-size-7" onClick={() => this.props.dispatch(showContact())} to="./contact">Contact</ Link>
+                <Link className="navbar-item is-uppercase is-hidden-touch is-size-7" to="./contact">Contact</ Link>
               </div>
             </div>
 
