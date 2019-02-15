@@ -29,11 +29,10 @@ class Nav extends React.Component {
         <nav className="navbar is-transparent is-size-4 is-fixed-top">
           <div className="container">
             <div className="navbar-brand">
-              <span className="navbar-item spaceship">
+              <span className="spaceship">
                 <img src="/images/alien-spaceship.png" alt="alien spaceship image"></img>
               </span>
-              <h1 className="navbar-item is-uppercase is-size-4">Steve Torrens</h1>
-              <SocialIcons iconClass={"is-hidden-desktop"} />
+              <h1 className="navbar-item is-uppercase logo">Steve Torrens</h1>
             </div>
 
             <div className="navbar-item is-hidden-desktop burger-container">

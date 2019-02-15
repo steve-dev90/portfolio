@@ -10,7 +10,7 @@ const LandingContent = () => (
             <h2 className="title is-2 has-text-centered has-text-weight-semibold">What I do</h2>
             <p className="content" > I am a passionate software developer that enjoys developing web
               applications using Ruby on Rails and Javascript.  I have great communication skills,
-              and are able to build solid working relationsips and effectively collarborate within
+              and are able to effectively collarborate within
               and between teams. I take pride in my work, and strive to write code that is maintainable,
               well tested and that delivers on intended outcomes.
             </p>

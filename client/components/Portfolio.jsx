@@ -35,11 +35,9 @@ class Portfolio extends React.Component {
         <Hero/>
         <LandingContent />
         {/* {this.state.hero ? comp1 : comp2} */}
-        <footer className="footer pagefooter">
-          <div className="container">
-            <Footer />
-          </div>
-        </footer>
+
+        <Footer />
+
       </React.Fragment> )
   }
 }
