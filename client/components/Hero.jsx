@@ -2,16 +2,16 @@ import React from 'react'
 
 const Hero = () => (
   <React.Fragment>
-    <div class="columns is-gapless">
+    <div className="columns is-gapless">
 
-      <div class="column is-three-fifths">
+      <div className="column is-three-fifths">
         <div className="hero is-fullheight">
           <div className="hero-body hero-image">
           </div>
         </div>
       </div>
 
-      <div class="column is-two-fifths">
+      <div className="column is-two-fifths">
         <div className="hero is-fullheight is-light">
           <div className="hero-body">
             <div className="container">

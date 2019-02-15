@@ -29,6 +29,9 @@ class Nav extends React.Component {
         <nav className="navbar is-transparent is-size-4 is-fixed-top">
           <div className="container">
             <div className="navbar-brand">
+              <span className="navbar-item spaceship">
+                <img src="/images/alien-spaceship.png" alt="alien spaceship image"></img>
+              </span>
               <h1 className="navbar-item is-uppercase is-size-4">Steve Torrens</h1>
               <SocialIcons iconClass={"is-hidden-desktop"} />
             </div>
