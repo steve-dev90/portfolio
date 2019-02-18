@@ -15,7 +15,7 @@ const Hero = () => (
         <div className="hero is-fullheight is-light">
           <div className="hero-body">
             <div className="container">
-              <h1 className="title is-size-1">
+              <h1 className="title is-1">
                 Full Stack Software Developer
               </h1>
               <h2 className="subtitle">

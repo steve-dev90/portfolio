@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Project from './Project'
-import Nav from './Nav'
 import {getProjects} from '../actions/projects'
 
 class Projects extends React.Component {
