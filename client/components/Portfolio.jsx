@@ -1,8 +1,7 @@
 import React from 'react'
-import Nav from './Nav'
 import Hero from './Hero'
 import LandingContent from './LandingContent'
-import Footer from './Footer'
+
 
 class Portfolio extends React.Component {
 
@@ -31,13 +30,9 @@ class Portfolio extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Nav />
         <Hero/>
         <LandingContent />
         {/* {this.state.hero ? comp1 : comp2} */}
-
-        <Footer />
-
       </React.Fragment> )
   }
 }

@@ -14,7 +14,6 @@ class Projects extends React.Component {
 
     return (
       <React.Fragment>
-        <Nav />
         <section className="Projects sub-title">
           <div className="container">
             <div className="columns is-centered is-multiline is-mobile">

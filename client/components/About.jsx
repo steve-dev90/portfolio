@@ -6,7 +6,6 @@ class About extends React.Component {
   render(props) {
     return (
       <React.Fragment>
-        <Nav />
         <section className="section">
           <div className="container">
             <div className="columns is-centered is-multiline is-mobile">
