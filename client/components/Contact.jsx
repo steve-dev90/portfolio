@@ -13,7 +13,7 @@ class Contact extends React.Component {
 
     return (
       <React.Fragment>
-        <section className="Contact sub-title">
+        <section className="Contact section">
           <div className="container">
             <div className="columns is-centered is-multiline is-mobile">
 

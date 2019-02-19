@@ -7,13 +7,14 @@ class Projects extends React.Component {
 
   componentDidMount() {
     this.props.dispatch(getProjects())
+    window.scrollTo(0, 0)
   }
 
   render(props) {
 
     return (
       <React.Fragment>
-        <section className="Projects sub-title">
+        <section className="Projects section">
           <div className="container">
             <div className="columns is-centered is-multiline is-mobile">
               <div className="column is-11-mobile is-8-tablet is-8-desktop">

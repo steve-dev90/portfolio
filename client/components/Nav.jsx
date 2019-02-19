@@ -35,7 +35,7 @@ class Nav extends React.Component {
               <h1 className="navbar-item logo">Steve Torrens</h1>
             </div>
 
-            <div className="navbar-item is-hidden-desktop burger-container">
+            <div className="navbar-item is-hidden-tablet burger-container">
               <button  className="burger" onClick={() => this.props.dispatch(handleOpenModal())} >
                 <span className="icon title is-4">
                   <i className="fa fa-bars has-text-link"></i>
@@ -43,10 +43,10 @@ class Nav extends React.Component {
               </button>
             </div>
 
-            {/* <Modal /> */}
+            <Modal />
 
             <div className={this.state.burgerMenu ? "navbar-menu is-active": "navbar-menu" }>
-              <div className="navbar-end is-uppercase is-hidden-touch is-size-6  has-text-weight-semibold">
+              <div className="navbar-end is-uppercase is-hidden-mobile is-size-6  has-text-weight-semibold">
                 <Link className="navbar-item has-text-info" replace to="./">Home</ Link>
                 <Link className="navbar-item has-text-info" replace to="./projects">Projects</ Link>
                 <Link className="navbar-item has-text-info" replace to="./about">About</ Link>

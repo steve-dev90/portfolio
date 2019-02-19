@@ -6,7 +6,7 @@ class About extends React.Component {
   render(props) {
     return (
       <React.Fragment>
-        <section className="section">
+        <section className="About section">
           <div className="container">
             <div className="columns is-centered is-multiline is-mobile">
               <div className="column is-11-mobile is-8-tablet is-8-desktop">

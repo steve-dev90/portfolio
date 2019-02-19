@@ -7,12 +7,12 @@ const Footer = () => (
     <footer className="footer pagefooter">
       <div className="container">
         <div className="columns is-mobile is-centered ">
-          <div className="column is-one-quarter has-text-centered">
+          <div className="column is-three-quarters has-text-centered">
             <SocialIcons />
           </div>
         </div>
         <div className="columns is-mobile is-centered">
-          <div className="column is-one-third has-text-centered">
+          <div className="column is-three-quarters has-text-centered">
             <p className="is-size-7 has-text-weight-light">
               <span>contactstorrens@gmail.com or </span>
               <span className="has-text-link"><Link to="./contact" replace>send a message</ Link></span>
@@ -23,7 +23,7 @@ const Footer = () => (
           <img src="/images/alien-spaceship.png" alt="alien spaceship image"></img>
         </div>
         <div className="columns is-mobile">
-          <div className="column is-one-third">
+          <div className="column is-one-half">
             <p className="is-size-7">
               <span className="icon">
                 <i className="fa fa-copyright icon-size"></i>
