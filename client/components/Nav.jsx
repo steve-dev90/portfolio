@@ -1,27 +1,10 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { handleOpenModal } from '../actions/portfolio'
-// import { Link } from 'react-scroll'
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
-import SocialIcons from './SocialIcons'
-
 import Modal from './Modal'
 
-// Id burgerToggle required?
-
 class Nav extends React.Component {
-
-  constructor (props) {
-    super(props)
-    this.state = {
-      burgerMenu : false,
-    }
-    this.burgerToggle = this.burgerToggle.bind(this)
-  }
-
-  burgerToggle () {
-    this.setState ({ burgerMenu : !this.state.burgerMenu })
-  }
 
   render() {
     return (
@@ -45,7 +28,7 @@ class Nav extends React.Component {
 
             <Modal />
 
-            <div className={this.state.burgerMenu ? "navbar-menu is-active": "navbar-menu" }>
+            <div className= "navbar-menu" >
               <div className="navbar-end is-uppercase is-hidden-mobile is-size-6  has-text-weight-semibold">
                 <Link className="navbar-item has-text-info" replace to="./">Home</ Link>
                 <Link className="navbar-item has-text-info" replace to="./projects">Projects</ Link>

@@ -10,7 +10,7 @@ class Projects extends React.Component {
     window.scrollTo(0, 0)
   }
 
-  render(props) {
+  render() {
 
     return (
       <React.Fragment>

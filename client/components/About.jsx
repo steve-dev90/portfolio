@@ -3,6 +3,10 @@ import Technologies from './Technologies'
 
 class About extends React.Component {
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   render(props) {
     return (
       <React.Fragment>
