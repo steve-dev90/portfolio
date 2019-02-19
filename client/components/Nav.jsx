@@ -27,12 +27,12 @@ class Nav extends React.Component {
     return (
       <React.Fragment>
         <nav className="navbar is-transparent is-size-4 is-fixed-top">
-          <div className="container">
+          <div className="container navbar">
             <div className="navbar-brand">
               <span className="spaceship">
                 <img src="/images/alien-spaceship.png" alt="alien spaceship image"></img>
               </span>
-              <h1 className="navbar-item is-uppercase logo">Steve Torrens</h1>
+              <h1 className="navbar-item logo">Steve Torrens</h1>
             </div>
 
             <div className="navbar-item is-hidden-desktop burger-container">
@@ -46,11 +46,11 @@ class Nav extends React.Component {
             {/* <Modal /> */}
 
             <div className={this.state.burgerMenu ? "navbar-menu is-active": "navbar-menu" }>
-              <div className="navbar-end">
-                <Link className="navbar-item is-uppercase is-hidden-touch is-size-7" to="./">Home</ Link>
-                <Link className="navbar-item is-uppercase is-hidden-touch is-size-7" to="./projects">Projects</ Link>
-                <Link className="navbar-item is-uppercase is-hidden-touch is-size-7" to="./about">About</ Link>
-                <Link className="navbar-item is-uppercase is-hidden-touch is-size-7" to="./contact">Contact</ Link>
+              <div className="navbar-end is-uppercase is-hidden-touch is-size-6  has-text-weight-semibold">
+                <Link className="navbar-item has-text-info" replace to="./">Home</ Link>
+                <Link className="navbar-item has-text-info" replace to="./projects">Projects</ Link>
+                <Link className="navbar-item has-text-info" replace to="./about">About</ Link>
+                <Link className="navbar-item has-text-info" replace to="./contact">Contact</ Link>
               </div>
             </div>
 

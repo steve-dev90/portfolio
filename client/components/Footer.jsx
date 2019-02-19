@@ -1,3 +1,4 @@
+import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import React from 'react'
 import SocialIcons from './SocialIcons'
 
@@ -14,7 +15,7 @@ const Footer = () => (
           <div className="column is-one-third has-text-centered">
             <p className="is-size-7 has-text-weight-light">
               <span>contactstorrens@gmail.com or </span>
-              <span className="has-text-info">send a message</span>
+              <span className="has-text-link"><Link to="./contact" replace>send a message</ Link></span>
             </p>
           </div>
         </div>

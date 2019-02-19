@@ -12,23 +12,24 @@ class ContactForm extends React.Component {
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
-    
+
   handleSubmit (input) {
-    console.log (input)  
+    console.log (input)
     const {dispatch} = this.props
     dispatch(sendEmail(input.name, input.message, input.email, input.message))
     dispatch(actions.reset('form_message'))
     dispatch(hideContactForm())
   }
-    
+
   render(props) {
     return (
-      <React.Fragment> 
+      <React.Fragment>
+        <p>Interested in working with me? If so, send me a message.</p>
         <Form model="form_message" onSubmit={this.handleSubmit}>
           <div className="field">
             <label className="label">Name:</label>
               <div className="control">
-                <Control.text 
+                <Control.text
                     model=".name" className="input has-background-white-ter"
                     validators={{
                     required
@@ -111,21 +112,21 @@ class ContactForm extends React.Component {
                 />
               </div>
             </div>
-                    
-            <div className="control">        
+
+            <div className="control">
               <button className="button is-link" type="submit">
                 Submit
               </button>
             </div>
 
         </Form>
-      </React.Fragment>      
+      </React.Fragment>
     )
   }
 }
 
-const mapStateToProps = (state) => { 
+const mapStateToProps = (state) => {
   return {portfolio: state.portfolio}
 }
 
-export default connect(mapStateToProps)(ContactForm) 
+export default connect(mapStateToProps)(ContactForm)
