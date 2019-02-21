@@ -1,77 +1,46 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { showAbout, showProjects, showContact, handleOpenModal } from '../actions/portfolio'
-import { Link } from 'react-scroll'
-import SocialIcons from './SocialIcons'
-
+import { handleOpenModal } from '../actions/portfolio'
+import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import Modal from './Modal'
 
 class Nav extends React.Component {
 
-  constructor (props) {
-    super(props)
-    this.state = {
-      burgerMenu : false,
-    }
-    this.burgerToggle = this.burgerToggle.bind(this)
-  }
-    
-  burgerToggle () {
-    this.setState ({ burgerMenu : !this.state.burgerMenu })
-  }
-
-  render() { 
+  render() {
     return (
       <React.Fragment>
-        <div className="navbar-brand">
-          <SocialIcons iconClass={"is-hidden-desktop"} />
-        </div> 
+        <nav className="navbar is-transparent is-size-4 is-fixed-top">
+          <div className="container navbar">
+            <div className="navbar-brand">
+              <span className="spaceship">
+                <img src="/images/alien-spaceship.png" alt="alien spaceship image"></img>
+              </span>
+              <h1 className="navbar-item logo">Steve Torrens</h1>
+            </div>
 
-        <div className="navbar-item is-hidden-desktop burger-container">
-          <button  className="burger" onClick={() => this.props.dispatch(handleOpenModal())} >
-            <span className="icon title is-4">
-              <i className="fa fa-bars has-text-link"></i>
-            </span>
-          </button>           
-        </div>
-
-        <Modal /> 
-
-        <div className={this.state.burgerMenu ? "navbar-menu is-active": "navbar-menu" }> 
-         
-          <div className="navbar-end">
-            <SocialIcons iconClass={"is-hidden-touch"} />
-
-            <div className="navbar-item has-dropdown is-hoverable">  
-              <div className="navbar-item is-hidden-touch">
+            <div className="navbar-item is-hidden-tablet burger-container">
+              <button  className="burger" onClick={() => this.props.dispatch(handleOpenModal())} >
                 <span className="icon title is-4">
-                  <i className="fa fa-chevron-down has-text-link"></i>
+                  <i className="fa fa-bars has-text-link"></i>
                 </span>
-              </div>
-              <div className="navbar-dropdown is-boxed">
-                <Link activeClass="active" className="About" to="About" offset={-50} spy={true} smooth={true} duration={600} >
-                  <button className="button is-white navbar-item is-size-6 is-size-4-touch is-inline-touch" onClick={() => this.props.dispatch(showAbout())}>
-                    About 
-                  </button> 
-                </Link> 
-                <Link activeClass="active" className="Projects" to="Projects" offset={-50} spy={true} smooth={true} duration={600} >
-                  <button className="button is-white navbar-item is-size-6 is-size-4-touch is-inline-touch" onClick={() => this.props.dispatch(showProjects())}>
-                    Projects
-                  </button> 
-                </Link> 
-                <Link activeClass="active" className="Contact" to="Contact"  offset={-50} spy={true} smooth={true} duration={600} >
-                  <button className="button is-white navbar-item is-size-6 is-size-4-touch is-inline-touch" onClick={() => this.props.dispatch(showContact())}>
-                    Contact
-                  </button> 
-                </Link> 
+              </button>
+            </div>
+
+            <Modal />
+
+            <div className= "navbar-menu" >
+              <div className="navbar-end is-uppercase is-hidden-mobile is-size-6  has-text-weight-semibold">
+                <Link className="navbar-item has-text-info" replace to="./">Home</ Link>
+                <Link className="navbar-item has-text-info" replace to="./projects">Projects</ Link>
+                <Link className="navbar-item has-text-info" replace to="./about">About</ Link>
+                <Link className="navbar-item has-text-info" replace to="./contact">Contact</ Link>
               </div>
             </div>
+
           </div>
-
-        </div>
-
-      </React.Fragment> 
-  )} 
+        </nav>
+      </React.Fragment>
+  )}
 }
 
 export default connect()(Nav)

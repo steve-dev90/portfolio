@@ -1,25 +1,16 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import { showAbout, showProjects, showContact, handleCloseModal } from '../actions/portfolio'
-import { Link } from 'react-scroll'
+import { connect } from 'react-redux'
+import { handleCloseModal } from '../actions/portfolio'
 import ReactModal from 'react-modal'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
 
 class Modal extends React.Component {
 
-  constructor () {
-    super()   
-    this.handleCloseModal = this.handleCloseModal.bind(this)
-  }
-  
-  handleCloseModal () {
-    this.props.dispatch(handleCloseModal())
-  }
-
-  render() { 
-    return (      
+  render() {
+    return (
       <React.Fragment>
-          
-        <ReactModal 
+
+        <ReactModal
           isOpen={this.props.portfolio.showModal}
           contentLabel="onRequestClose Example"
           onRequestClose={this.handleCloseModal}
@@ -30,29 +21,25 @@ class Modal extends React.Component {
           <button className="button is-white is-pulled-right has-background-info" onClick={() => this.props.dispatch(handleCloseModal())}>
             <span className="icon has-text-white is-size-6"><i className="fa fa-times"></i></span>
           </button>
-          <Link activeClass="active" className="About" to="About" offset={-50} spy={true} smooth={true} duration={600} >
-            <button className="modal-item" onClick={() => this.props.dispatch(showAbout())}>
-              About 
-            </button> 
-          </Link> 
-          <Link activeClass="active" className="Projects" to="Projects" offset={-50} spy={true} smooth={true} duration={600} >
-            <button className="modal-item" onClick={() => this.props.dispatch(showProjects())}>
-              Projects
-            </button> 
-          </Link> 
-          <Link activeClass="active" className="Contact" to="Contact"  offset={-50} spy={true} smooth={true} duration={600} >
-            <button className="modal-item" onClick={() => this.props.dispatch(showContact())}>
-              Contact
-            </button> 
-          </Link> 
+          <button onClick={() => this.props.dispatch(handleCloseModal())}>
+            <Link className="modal-item" replace to="./">Home</ Link>
+          </button>
+          <button onClick={() => this.props.dispatch(handleCloseModal())}>
+            <Link className="modal-item" replace to="./projects">Projects</ Link>
+          </button>
+          <button onClick={() => this.props.dispatch(handleCloseModal())}>
+            <Link className="modal-item" replace to="./about">About</ Link>
+          </button>
+          <button onClick={() => this.props.dispatch(handleCloseModal())}>
+            <Link className="modal-item" replace to="./contact">Contact</ Link>
+          </button>
         </ReactModal>
-       
-      </React.Fragment> 
-  )} 
+
+      </React.Fragment>
+  )}
 }
 
 const mapStateToProps = (state) => {
-  console.log('Modal',state.portfolio.showModal)  
   return {
     portfolio: state.portfolio,
   }
