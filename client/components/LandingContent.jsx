@@ -10,11 +10,12 @@ const LandingContent = () => (
           <div className="column is-11-mobile is-8-tablet is-8-desktop">
             <Element name="Who" className="element content-title" ></Element>
             <h2 className="title is-3 has-text-centered has-text-weight-semibold has-text-info">What I do</h2>
-            <p className="content" > I am a passionate software developer that enjoys developing web
-              applications using Ruby on Rails and Javascript.  I have great communication skills,
-              and are able to effectively collarborate within
-              and between teams. I take pride in my work, and strive to write code that is maintainable,
-              well tested and that delivers on intended outcomes.
+            <p className="content" >
+              I am a passionate software developer that enjoys developing web applications
+              using Ruby on Rails and Javascript. I have excellent communication skills and
+              are able to effectively collaborate within and between teams. I take pride in
+              my work, and strive to write code that is maintainable, well tested and that
+              delivers on intended outcomes.
             </p>
             <div className="content is-link has-text-centered">
               <Link to="./about">Learn More</ Link>

@@ -14,7 +14,6 @@ class ContactForm extends React.Component {
   }
 
   handleSubmit (input) {
-    console.log (input)
     const {dispatch} = this.props
     dispatch(sendEmail(input.name, input.message, input.email, input.message))
     dispatch(actions.reset('form_message'))

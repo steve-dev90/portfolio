@@ -1,8 +1,9 @@
 import React from 'react'
 
 const techFileNames = ["ruby", "javascript", "rails", "react", "redux", "jquery",
-"node", "html5", "css3", "bulma", "git", "heroku"]
-const Technologies = (props) => (
+  "node", "html5", "css3", "bulma", "git", "heroku"]
+
+  const Technologies = (props) => (
 
   <React.Fragment>
     <div className="has-text-centered">
