@@ -22,18 +22,18 @@ class Modal extends React.Component {
             <span className="icon has-text-white is-size-6"><i className="fa fa-times"></i></span>
           </button>
 
-          <Link  replace to="./"><button  className="modal-item" onClick={() => this.props.dispatch(handleCloseModal())}>
+          <Link replace to="./"><button className="modal-item" onClick={() => this.props.dispatch(handleCloseModal())}>
             Home
           </button></ Link>
-          <button onClick={() => this.props.dispatch(handleCloseModal())}>
-            <Link className="modal-item" replace to="./projects">Projects</ Link>
-          </button>
-          <button onClick={() => this.props.dispatch(handleCloseModal())}>
-            <Link className="modal-item" replace to="./about">About</ Link>
-          </button>
-          <button onClick={() => this.props.dispatch(handleCloseModal())}>
-            <Link className="modal-item" replace to="./contact">Contact</ Link>
-          </button>
+          <Link replace to="./projects"><button className="modal-item" onClick={() => this.props.dispatch(handleCloseModal())}>
+            Projects
+          </button></ Link>
+          <Link  replace to="./about"><button className="modal-item"onClick={() => this.props.dispatch(handleCloseModal())}>
+            About
+          </button></ Link>
+          <Link  replace to="./contact"><button className="modal-item" onClick={() => this.props.dispatch(handleCloseModal())}>
+            Contact
+          </button></ Link>
         </ReactModal>
 
       </React.Fragment>
