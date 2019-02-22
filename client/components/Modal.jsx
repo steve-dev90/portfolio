@@ -21,9 +21,10 @@ class Modal extends React.Component {
           <button className="button is-white is-pulled-right has-background-info" onClick={() => this.props.dispatch(handleCloseModal())}>
             <span className="icon has-text-white is-size-6"><i className="fa fa-times"></i></span>
           </button>
-          <button onClick={() => this.props.dispatch(handleCloseModal())}>
-            <Link className="modal-item" replace to="./">Home</ Link>
-          </button>
+
+          <Link  replace to="./"><button  className="modal-item" onClick={() => this.props.dispatch(handleCloseModal())}>
+            Home
+          </button></ Link>
           <button onClick={() => this.props.dispatch(handleCloseModal())}>
             <Link className="modal-item" replace to="./projects">Projects</ Link>
           </button>
