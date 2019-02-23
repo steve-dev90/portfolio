@@ -96,15 +96,24 @@ $fa-font-path: '~font-awesome/fonts';
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: white;
-
+  color: white
 }
 
-@media (min-width: 769px) {
+@media (max-width: 769px) {
 
-  .hero-image {
-	  background-attachment: fixed;
+  .hero-image-mobile {
+    background-image: url('/images/sketch3.jpg');
+    background-position: right;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: white;
+    color: white
   }
 
+  .hero-arrow {
+    font-size: 4rem;
+  }
 }
 
 .Modal {

@@ -8,16 +8,16 @@ class Hero extends React.Component {
       <React.Fragment>
         <div className="columns is-gapless">
 
-        <div className="column is-three-fifths">
+        <div className="column is-three-fifths is-hidden-mobile">
           <div className="hero is-fullheight">
-            <div className="hero-body hero-image">
+            <div className="hero-body hero-image ">
             </div>
           </div>
         </div>
 
         <div className="column is-two-fifths">
           <div className="hero is-fullheight is-light">
-            <div className="hero-body">
+            <div className="hero-body hero-image-mobile">
               <div className="container">
                 <h2 className="is-size-1 has-text-weight-bold">
                   Steve Torrens
