@@ -103,8 +103,7 @@ $fa-font-path: '~font-awesome/fonts';
   .hero-image-mobile {
     background-image: url('/images/sketch3.jpg');
     background-position: center;
-    background-position: right;
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-color: white;
