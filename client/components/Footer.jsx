@@ -6,12 +6,12 @@ const Footer = () => (
   <React.Fragment>
     <footer className="footer pagefooter">
       <div className="container">
-        <div className="columns is-mobile is-centered ">
+        <div className="columns is-centered ">
           <div className="column is-three-quarters has-text-centered">
             <SocialIcons />
           </div>
         </div>
-        <div className="columns is-mobile is-centered">
+        <div className="columns is-centered">
           <div className="column is-three-quarters has-text-centered">
             <p className="is-size-7 has-text-weight-light">
               <span>contactstorrens@gmail.com or </span>
