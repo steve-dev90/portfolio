@@ -21,7 +21,7 @@ class Contact extends React.Component {
                   <h2 className="title is-3 has-text-centered has-text-weight-semibold has-text-info">Contact</h2>
               </div>
 
-              <div className="column is-8-mobile is-5-tablet is-5-desktop">
+              <div className="column is-11-mobile is-5-tablet is-5-desktop">
                 <div className="content is-size-6">
                   {this.props.portfolio.contactFormDisplay
                   ? <ContactForm />
