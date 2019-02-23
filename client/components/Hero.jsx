@@ -25,7 +25,7 @@ class Hero extends React.Component {
                 <h1 className="is-size-3 has-text-weight-semibold">
                   Full Stack Software Developer
                 </h1>
-                <div className="has-text-centered has-text-link hero-arrow">
+                <div className="has-text-centered hero-arrow">
                   <Link activeClass="active" className="Who" to="Who" offset={-60} spy={true} smooth={true} duration={600} >
                     <i className="fa fa-angle-double-down"></i>
                   </Link>
