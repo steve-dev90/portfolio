@@ -18,7 +18,7 @@ class Nav extends React.Component {
               <h1 className="navbar-item logo">Steve Torrens</h1>
             </div>
 
-            <div className="navbar-item is-hidden-tablet burger-container">
+            <div className="navbar-item burger-container">
               <button  className="burger" onClick={() => this.props.dispatch(handleOpenModal())} >
                 <span className="icon title is-4">
                   <i className="fa fa-bars has-text-link"></i>
