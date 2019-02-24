@@ -16,8 +16,8 @@ class Hero extends React.Component {
         </div>
 
         <div className="column is-two-fifths">
-          <div className="hero is-fullheight is-light">
-            <div className="hero-body hero-image-mobile">
+          <div className="hero is-fullheight is-light hero-image-mobile">
+            <div className="hero-body ">
               <div className="container">
                 <h2 className="is-size-1 has-text-weight-bold">
                   Steve Torrens

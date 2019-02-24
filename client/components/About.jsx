@@ -12,10 +12,10 @@ class About extends React.Component {
       <React.Fragment>
         <section className="About section">
           <div className="container">
-            <div className="columns is-centered is-multiline is-mobile">
-              <div className="column is-11-mobile is-8-tablet is-8-desktop">
+            <div className="columns is-centered is-multiline">
+              <div className="column is-8">
                 <h2 className="title is-3 has-text-centered has-text-weight-semibold has-text-info">Who I am</h2>
-                <div className="content is-size-6 has-text-justified">
+                <div className="content is-size-5 has-text-justified has-text-left-mobile">
                   <p>My name is Steve Torrens, and I am a software developer, based in Wellington, New Zealand. I have a background in mechanical engineering,
                     operations and policy. I have just finished contracting for a small start-up called Glimp, working
                     with Ruby on Rails. At the beginning of last year, I completed a boot camp at the <a href="https://devacademy.co.nz">Enspiral Dev Academy</a> and
@@ -27,7 +27,7 @@ class About extends React.Component {
                 <h2 className="title is-3 has-text-centered has-text-weight-semibold has-text-info">Technologies I use</h2>
                 <Technologies />
                 <h2 className="title is-3 has-text-centered has-text-weight-semibold has-text-info">My Resume</h2>
-                <div className="content is-size-6 has-text-justified">
+                <div className="content is-size-5 has-text-justified has-text-left-mobile">
                   <p>If you would like to know a bit more about my background, check out
                     my <a href="./images/resume.pdf" download> resume </a> or, if you prefer,
                     my <a href="https://www.linkedin.com/in/steve-torrens-6100b721/">linkedin</a> profile.
