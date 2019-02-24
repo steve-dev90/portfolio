@@ -4,7 +4,7 @@ const Project = (props) => (
 
   <React.Fragment>
     <div className="column is-8">
-      <div className="content is-size-6 is-size-5-mobile">
+      <div className="content is-size-6 is-size-6-mobile">
         <h3 className="title is-4 has-text-centered">{props.project.title}</h3>
 
         <p className="has-text-centered">
