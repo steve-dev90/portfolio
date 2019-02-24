@@ -16,7 +16,7 @@ class Projects extends React.Component {
       <React.Fragment>
         <section className="Projects section">
           <div className="container">
-            <div className="columns is-centered is-multiline is-mobile">
+            <div className="columns is-centered is-multiline">
               <div className="column is-11-mobile is-8-tablet is-8-desktop">
                 <h2 className="title is-3 has-text-centered has-text-weight-semibold has-text-info">Projects</h2>
               </div>

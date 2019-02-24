@@ -22,7 +22,7 @@ class Contact extends React.Component {
               </div>
 
               <div className="column is-11-mobile is-5-tablet is-5-desktop">
-                <div className="content is-size-6">
+                <div className="content is-size-6 is-size-5-mobile">
                   {this.props.portfolio.contactFormDisplay
                   ? <ContactForm />
                   : <ContactFormSubmitted />

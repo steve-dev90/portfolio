@@ -100,26 +100,8 @@ $fa-font-path: '~font-awesome/fonts';
 
 @media (max-width: 768px) {
 
-  .hero-image-mobile {
-    background-image: url('/images/sketch3.jpg');
-    background-position: center;
-    background-size: 700px;
-    width: 100%;
-    height: 70vh;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-color: white;
-    color: white;
-    font-weight: 1200;
-  }
-
-  .hero-arrow {
-    font-size: 4rem;
-    color: white;
-  }
-
   .tech-image {
-    width: 50px;
+    width: 70px;
   }
 }
 

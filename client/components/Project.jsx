@@ -3,8 +3,8 @@ import React from 'react'
 const Project = (props) => (
 
   <React.Fragment>
-    <div className="column is-11-mobile is-8-tablet is-8-desktop">
-      <div className="content is-size-6">
+    <div className="column is-8">
+      <div className="content is-size-6 is-size-5-mobile">
         <h3 className="title is-4 has-text-centered">{props.project.title}</h3>
 
         <p className="has-text-centered">
@@ -17,7 +17,7 @@ const Project = (props) => (
         </p>
 
         {props.project.copy.map((copy, index) => {
-          return <p className="has-text-justified" key={index}>{copy.para}</p>
+          return <p className="has-text-justified has-text-left-mobile" key={index}>{copy.para}</p>
         })}
       </div>
     </div>

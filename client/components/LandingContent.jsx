@@ -10,7 +10,7 @@ const LandingContent = () => (
           <div className="column is-8">
             <Element name="Who" className="element content-title" ></Element>
             <h2 className="title is-3 has-text-centered has-text-weight-semibold has-text-info">What I do</h2>
-            <div className="content is-size-5 has-text-justified has-text-left-mobile">
+            <div className="content is-size-5-mobile is-size-6 has-text-justified has-text-left-mobile">
               <p>
                 I am a passionate software developer that enjoys developing web applications
                 using Ruby on Rails and Javascript. I have excellent communication skills and
@@ -19,7 +19,7 @@ const LandingContent = () => (
                 delivers on intended outcomes.
               </p>
             </div>
-            <div className="content is-link has-text-centered">
+            <div className="content is-size-5-mobile is-link has-text-centered">
               <Link to="./about">Learn More</ Link>
             </div>
           </div>
