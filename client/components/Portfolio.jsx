@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from './Hero'
 import LandingContent from './LandingContent'
-
+import MDSpinner from "react-md-spinner"
 
 class Portfolio extends React.Component {
 
@@ -14,13 +14,20 @@ class Portfolio extends React.Component {
     this.setState({ isLoading: false })
   }
 
-  render() {
-    if (this.state.isloading) return <div>loading</div>
+  portfolio() {
     return (
       <React.Fragment>
         <Hero/>
         <LandingContent />
       </React.Fragment> )
+  }
+
+  render() {
+    return (
+      this.state.isLoading
+      ? <div className="spinner"><MDSpinner singleColor="#03a9f4" /></div>
+      : this.portfolio()
+    )
   }
 }
 
