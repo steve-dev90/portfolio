@@ -7,7 +7,7 @@ const LandingContent = () => (
     <section className="section">
       <div className="container">
         <div className="columns is-centered">
-          <div className="column is-8">
+          <div className="column is-8 landing-content">
             <Element name="Who" className="element content-title" ></Element>
             <h2 className="title is-3 has-text-centered has-text-weight-semibold has-text-info">What I do</h2>
             <div className="content is-size-6-mobile is-size-6 has-text-justified has-text-left-mobile">
