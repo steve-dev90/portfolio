@@ -110,6 +110,16 @@ $fa-font-path: '~font-awesome/fonts';
   background-color: white;
 }
 
+.ic {
+  height: 100vh;
+}
+
+.heroimg {
+  height: 100%;
+  overflow: hidden;
+
+}
+
 @media (max-width: 768px) {
 
   .tech-image {

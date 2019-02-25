@@ -3,19 +3,33 @@ import { Link } from 'react-scroll'
 
 class Hero extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = { imageStatus: "loading" };
+  }
+
+  handleImageLoaded() {
+    this.setState({ imageStatus: "loaded" });
+  }
+
+  handleImageErrored() {
+    this.setState({ imageStatus: "failed to load" });
+  }
+
   render() {
     return (
       <React.Fragment>
         <div className="columns is-gapless">
 
-        <div className="column is-three-fifths is-hidden-mobile">
-          <div className="hero is-fullheight">
+        <div className="column is-two-fifths is-hidden-mobile ic">
+          <img className="heroimg" src="/images/sketch3.jpg" />
+          {/* <div className="hero is-fullheight">
             <div className="hero-body hero-image ">
             </div>
-          </div>
+          </div> */}
         </div>
 
-        <div className="column is-two-fifths">
+        <div className="column is-three-fifths">
           <div className="hero is-fullheight is-light">
             <div className="hero-body ">
               <div className="container">
