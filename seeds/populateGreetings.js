@@ -12,8 +12,8 @@ exports.seed = function(knex, Promise) {
           { para: "Square of Pointlessness was my final exercise for bootcamp prep. I used native Javascript to animate a square." }
         ]), old_project: true},
         {id: 3, title: "CompareBear Australia", image: 'Comparebear.png', copy: JSON.stringify([
-          { para: "I was contacted by a small start-up, called Glimp, to work on the launch of their Australian utility comparison website. CompareBear Australia allows users to compare the price and services of different utility companies." },
-          { para: "I was responsible for designing, building and testing the back-end of this application. My work included database set-up, data importing rake tasks, data validation and internal APIs. In particular, I developed business logic to calculate comparative annual costs for different electricity retailers, taking into account different tariff types and energy consumption patterns across Australia. I also set up front-end skeleton forms and assocciated API calls to assist the front-end developer." },
+          { para: "I was contracted by a small start-up, called Glimp, to work on the launch of their Australian utility comparison website, called CompareBear. This site allows users to compare the price and services of different utility companies." },
+          { para: "I was responsible for designing, building and testing the back-end of this application. My work included database set-up, importing data using rake tasks, data validation design and setting up internal APIs. In particular, I designed and developed business logic to calculate comparative annual costs for different electricity retailers, taking into account the considerable range of tariff types and energy consumption patterns across Australia. I also set up front-end skeleton forms and assocciated API calls to assist the front-end developer." },
           { para: "Technologies that I used for this project included: Ruby on Rails, PostgreSQL, Minitest, Jquery, git and Heroku." }
         ]), old_project: false},
       ])
