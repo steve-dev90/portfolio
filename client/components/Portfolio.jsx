@@ -25,7 +25,7 @@ class Portfolio extends React.Component {
   render() {
     return (
       this.state.isLoading
-      ? <div className="spinner"><MDSpinner singleColor="#03a9f4" /></div>
+      ? <div className="spinner"><MDSpinner singleColor="#03a9f4"/></div>
       : this.portfolio()
     )
   }
