@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-scroll'
-import ImageLoader from 'react-load-image';
+import Image from './Image'
 
 class Hero extends React.Component {
 
@@ -11,11 +11,10 @@ class Hero extends React.Component {
 
         <div className="column is-two-fifths is-hidden-mobile">
           <div className="has-background-light">
-            <ImageLoader src="/images/sketch3.jpg"  >
+            <Image src="/images/sketch3.jpg">
               <img className="heroimg" />
-              <div>Error!</div>
               <img src="/images/sketch3-small.jpg" style={{filter: 'blur(20px)'}} className="heroimg"/>
-            </ImageLoader>
+            </Image>
           </div>
 
           {/* <div className="hero is-fullheight">
