@@ -2,7 +2,7 @@ import React from 'react'
 import Image from './Image'
 
 function smallImagePath(image) {
-  return `${image.slice(0,-3)}-small.png`
+  return `${image.slice(0,-4)}-small.png`
 }
 
 const Project = (props) => (
