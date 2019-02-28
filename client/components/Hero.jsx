@@ -1,28 +1,23 @@
 import React from 'react'
 import { Link } from 'react-scroll'
+import ImageLoader from 'react-load-image';
 
 class Hero extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = { imageStatus: "loading" };
-  }
-
-  handleImageLoaded() {
-    this.setState({ imageStatus: "loaded" });
-  }
-
-  handleImageErrored() {
-    this.setState({ imageStatus: "failed to load" });
-  }
 
   render() {
     return (
       <React.Fragment>
         <div className="columns is-gapless">
 
-        <div className="column is-two-fifths is-hidden-mobile ic">
-          <img className="heroimg" src="/images/sketch3.jpg" />
+        <div className="column is-two-fifths is-hidden-mobile">
+          <div className="has-background-light">
+            <ImageLoader src="/images/sketch3.jpg"  >
+              <img className="heroimg" />
+              <div>Error!</div>
+              <img src="/images/sketch3-small.jpg" style={{filter: 'blur(20px)'}} className="heroimg"/>
+            </ImageLoader>
+          </div>
+
           {/* <div className="hero is-fullheight">
             <div className="hero-body hero-image ">
             </div>
