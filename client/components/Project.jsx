@@ -2,7 +2,8 @@ import React from 'react'
 import Image from './Image'
 
 function smallImagePath(image) {
-  return `${image.slice(0,-4)}-small.png`
+  console.log(`${image.slice(0,-4)}-small.png`)
+  return `./images/${image.slice(0,-4)}-small.png`
 }
 
 const Project = (props) => (
@@ -12,7 +13,7 @@ const Project = (props) => (
       <div className="content is-size-6 is-size-6-mobile">
         <h3 className="title is-4 has-text-centered">{props.project.title}</h3>
 
-        <p className="has-text-centered ">
+        <div className="has-text-centered ">
           {props.project.image.slice(-3) == 'mp4' ?
             <video width="600" height="600" controls>
               <source src={`/images/${props.project.image}`} type="video/mp4"/>
@@ -25,7 +26,7 @@ const Project = (props) => (
               </Image >
             </div>
            }
-        </p>
+        </div>
 
         {props.project.copy.map((copy, index) => {
           return <p className="has-text-justified has-text-left-mobile" key={index}>{copy.para}</p>
