@@ -11,16 +11,8 @@ class Hero extends React.Component {
 
         <div className="column is-two-fifths is-hidden-mobile">
           <div className="has-background-light">
-            <Image src="/images/sketch3.jpg">
-              <img className="heroimg" />
-              <img src="/images/sketch3-small.jpg" style={{filter: 'blur(20px)'}} className="heroimg"/>
-            </Image>
+            <Image src="/images/sketch3.jpg" className="heroimg" />
           </div>
-
-          {/* <div className="hero is-fullheight">
-            <div className="hero-body hero-image ">
-            </div>
-          </div> */}
         </div>
 
         <div className="column is-three-fifths">

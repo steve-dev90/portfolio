@@ -1,10 +1,6 @@
 import React from 'react'
-import Image from './Image'
-
-function smallImagePath(image) {
-  console.log(`${image.slice(0,-4)}-small.png`)
-  return `./images/${image.slice(0,-4)}-small.png`
-}
+import ProjectVideo from './ProjectVideo'
+import ProjectImage from './ProjectImage'
 
 const Project = (props) => (
 
@@ -15,16 +11,8 @@ const Project = (props) => (
 
         <div className="has-text-centered ">
           {props.project.image.slice(-3) == 'mp4' ?
-            <video width="600" height="600" controls>
-              <source src={`/images/${props.project.image}`} type="video/mp4"/>
-              Your browser does not support the video tag.
-            </video> :
-            <div className="image is-5by3">
-              <Image src={`/images/${props.project.image}`}>
-                <img />
-                <img src={smallImagePath(props.project.image)} style={{filter: 'blur(20px)'}} />
-              </Image >
-            </div>
+            <ProjectVideo image = {props.project.image} /> :
+            <ProjectImage image = {props.project.image} />
            }
         </div>
 
