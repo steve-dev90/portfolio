@@ -11,7 +11,7 @@ class Hero extends React.Component {
 
         <div className="column is-two-fifths is-hidden-mobile">
           <div >
-            <Image src="/images/sketch3.jpg" />
+            <Image src="/images/sketch3.jpg" imageStyle="heroimg" />
           </div>
         </div>
 

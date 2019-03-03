@@ -9,7 +9,7 @@ const Technologies = (props) => (
   <React.Fragment>
     <div className="has-text-centered">
           {techFileNames.map((techFileName, index) =>
-            <Image src={`/images/technologies/${techFileName}.png`} className="tech-image" key={index}/>
+            <Image src={`/images/technologies/${techFileName}.png`} imageStyle="tech-image" imageDivStyle="techimg-container" key={index}/>
             // <img className="tech-image" key={index} src={`/images/technologies/${techFileName}.png`} alt={`${techFileName}`}></img>
           )}
     </div>
