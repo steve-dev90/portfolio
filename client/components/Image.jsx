@@ -7,7 +7,7 @@ function smallImagePath(image) {
 
 const Image = (props) => (
   <React.Fragment>
-    <ImageLoader  className={props.imageDivStyle}>
+    <ImageLoader {...props} className={props.imageDivStyle}>
       <img className={props.imageStyle} />
       <div></div>
       <img src={ smallImagePath(props.src) } style={ {filter: 'blur(20px)'} } className={props.imageStyle} />
