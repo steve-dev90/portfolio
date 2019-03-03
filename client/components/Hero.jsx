@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-scroll'
+import Image from './Image'
 
 class Hero extends React.Component {
 
@@ -8,14 +9,11 @@ class Hero extends React.Component {
       <React.Fragment>
         <div className="columns is-gapless">
 
-        <div className="column is-three-fifths is-hidden-mobile">
-          <div className="hero is-fullheight">
-            <div className="hero-body hero-image ">
-            </div>
-          </div>
+        <div className="column is-two-fifths is-hidden-mobile">
+          <Image src="/images/sketch3.jpg" imageStyle="heroimg" />
         </div>
 
-        <div className="column is-two-fifths">
+        <div className="column is-three-fifths">
           <div className="hero is-fullheight is-light">
             <div className="hero-body ">
               <div className="container">
