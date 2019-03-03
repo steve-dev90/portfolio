@@ -2,27 +2,19 @@ import React from 'react'
 import { shallow, mount, configure } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 configure({ adapter: new Adapter() })
-
-
-import About from '../../client/components/About'
+import Nav from '../../client/components/Nav'
+import { handleOpenModal } from '../../client/actions/portfolio'
 import './setup-dom'
-import { showAbout, hideAbout } from '../../client/actions/portfolio'
-
 import {Provider} from 'react-redux'
-
 import configureStore from 'redux-mock-store'
 
 const mockStore = configureStore([])
 
-// jest.mock('../../client/actions/portfolio.js', () => ({
-//   showAbout: () => ({
-//     type: 'FAKE_ACTION'
-//   }),
-//   hideAbout: () => ({
-//     type: 'FAKE_ACTION'
-//   })
-
-// }))
+jest.mock('../../client/actions/portfolio.js', () => ({
+  handleOpenModal: () => ({
+    type: 'FAKE_ACTION'
+  })
+}))
 
 // test('About.jsx buttons are working', () => {
 //   const store = mockStore({
@@ -42,14 +34,11 @@ const mockStore = configureStore([])
 //   })
 // })
 
-test('About.jsx content is present', () => {
-  const store = mockStore({
-    portfolio: {aboutDisplay: true}
-  })
+test('Nav menus are present', () => {
 
   const wrapper = mount(
     <Provider store={store}>
-      <About />
+      <Nav />
     </Provider>
   )
 

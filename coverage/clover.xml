@@ -1,19 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1529281125452" clover="3.2.0">
-  <project timestamp="1529281125452" name="All files">
-    <metrics statements="11" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="3" elements="19" coveredelements="17" complexity="0" loc="11" ncloc="11" packages="2" files="2" classes="2">
-      <package name="client.components">
-        <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="3"/>
-        <file name="About.jsx" path="/Users/stevetorrens/workspace/portfolio/client/components/About.jsx">
-          <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="3"/>
-          <line num="9" count="2" type="stmt"/>
-          <line num="24" count="0" type="stmt"/>
-          <line num="30" count="1" type="stmt"/>
-          <line num="57" count="1" type="stmt"/>
-          <line num="58" count="2" type="stmt"/>
+<coverage generated="1551654440289" clover="3.2.0">
+  <project timestamp="1551654440289" name="All files">
+    <metrics statements="67" coveredstatements="58" conditionals="6" coveredconditionals="3" methods="29" coveredmethods="21" elements="102" coveredelements="82" complexity="0" loc="67" ncloc="67" packages="8" files="13" classes="13">
+      <package name="portfolio">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="knexfile.js" path="/Users/stevetorrens/workspace/portfolio/knexfile.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="1" type="stmt"/>
         </file>
       </package>
-      <package name="test.client">
+      <package name="portfolio.client.actions">
+        <metrics statements="18" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="9" coveredmethods="4"/>
+        <file name="portfolio.js" path="/Users/stevetorrens/workspace/portfolio/client/actions/portfolio.js">
+          <metrics statements="10" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+        </file>
+        <file name="projects.js" path="/Users/stevetorrens/workspace/portfolio/client/actions/projects.js">
+          <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+          <line num="15" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="portfolio.client.components">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <file name="About.jsx" path="/Users/stevetorrens/workspace/portfolio/client/components/About.jsx">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+        </file>
+        <file name="Image.jsx" path="/Users/stevetorrens/workspace/portfolio/client/components/Image.jsx">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="5" count="12" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="12" type="stmt"/>
+        </file>
+        <file name="Technologies.jsx" path="/Users/stevetorrens/workspace/portfolio/client/components/Technologies.jsx">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="12" count="12" type="stmt"/>
+        </file>
+      </package>
+      <package name="portfolio.migrations">
+        <metrics statements="14" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="4"/>
+        <file name="20170601194049_greetings.js" path="/Users/stevetorrens/workspace/portfolio/migrations/20170601194049_greetings.js">
+          <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+        </file>
+        <file name="20180930105543_add_old_project_column.js" path="/Users/stevetorrens/workspace/portfolio/migrations/20180930105543_add_old_project_column.js">
+          <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="portfolio.seeds">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <file name="populateGreetings.js" path="/Users/stevetorrens/workspace/portfolio/seeds/populateGreetings.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="portfolio.server.db">
+        <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <file name="connection.js" path="/Users/stevetorrens/workspace/portfolio/server/db/connection.js">
+          <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+        </file>
+        <file name="projects.js" path="/Users/stevetorrens/workspace/portfolio/server/db/projects.js">
+          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="portfolio.test.client">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="setup-dom.js" path="/Users/stevetorrens/workspace/portfolio/test/client/setup-dom.js">
           <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -23,6 +117,19 @@
           <line num="7" count="1" type="stmt"/>
           <line num="8" count="1" type="stmt"/>
           <line num="9" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="portfolio.test.server">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <file name="test-environment.js" path="/Users/stevetorrens/workspace/portfolio/test/server/test-environment.js">
+          <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
         </file>
       </package>
     </metrics>

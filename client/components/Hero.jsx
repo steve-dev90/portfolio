@@ -9,7 +9,7 @@ class Hero extends React.Component {
       <React.Fragment>
         <div className="columns is-gapless">
 
-        <div className="column is-two-fifths is-hidden-mobile">
+        <div className="column is-two-fifths is-hidden-mobile has-background-light heroimg-container">
           <Image src="/images/sketch3.jpg" imageStyle="heroimg" />
         </div>
 
