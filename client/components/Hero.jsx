@@ -10,8 +10,8 @@ class Hero extends React.Component {
         <div className="columns is-gapless">
 
         <div className="column is-two-fifths is-hidden-mobile">
-          <div className="has-background-light">
-            <Image src="/images/sketch3.jpg" className="heroimg" />
+          <div >
+            <Image src="/images/sketch3.jpg" />
           </div>
         </div>
 
