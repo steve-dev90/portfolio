@@ -1,20 +1,20 @@
 import React from 'react'
 import { shallow, mount, configure } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-configure({ adapter: new Adapter() })
+import './enzymeSetup'
 import Nav from '../../client/components/Nav'
 import { handleOpenModal } from '../../client/actions/portfolio'
 import './setup-dom'
 import {Provider} from 'react-redux'
 import configureStore from 'redux-mock-store'
+import { MemoryRouter } from 'react-router';
 
 const mockStore = configureStore([])
 
-jest.mock('../../client/actions/portfolio.js', () => ({
-  handleOpenModal: () => ({
-    type: 'FAKE_ACTION'
-  })
-}))
+// jest.mock('../../client/actions/portfolio.js', () => ({
+//   handleOpenModal: () => ({
+//     type: 'FAKE_ACTION'
+//   })
+// }))
 
 // test('About.jsx buttons are working', () => {
 //   const store = mockStore({
@@ -34,15 +34,26 @@ jest.mock('../../client/actions/portfolio.js', () => ({
 //   })
 // })
 
-test('Nav menus are present', () => {
+describe('Nav component', () => {
 
-  const wrapper = mount(
-    <Provider store={store}>
-      <Nav />
-    </Provider>
-  )
+  const store = mockStore({
+      portfolio: [{showModal: false}]
+  })
 
-  expect(wrapper.find('h2').first().text()).toBe('Who I am')
-  expect(wrapper.find('div').children('p').first().text().includes('My name is Steve Torrens')).toBe(true)
+  let router = ''
 
+  const wrapper =  mount(
+    <MemoryRouter initialEntries={[ '/' ]}>
+      <Provider store={store}>
+        <Nav />
+      </Provider>
+    </MemoryRouter>
+    )
+
+  console.log('hello', wrapper, wrapper.find('img'))
+
+  it('contains home', () => {
+    console.log('hello', wrapper.find('nav'))
+    expect(wrapper.find('nav').first().text().includes('Home')).toBe(true)
+  })
 })

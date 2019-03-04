@@ -1,9 +1,6 @@
 import React from 'react'
 import { shallow, mount, configure } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-configure({ adapter: new Adapter() })
-
-
+import './enzymeSetup'
 import About from '../../client/components/About'
 import './setup-dom'
 import { showAbout, hideAbout } from '../../client/actions/portfolio'
@@ -52,6 +49,8 @@ test('About.jsx content is present', () => {
       <About />
     </Provider>
   )
+
+  console.log(wrapper)
 
   expect(wrapper.find('h2').first().text()).toBe('Who I am')
   expect(wrapper.find('div').children('p').first().text().includes('My name is Steve Torrens')).toBe(true)
