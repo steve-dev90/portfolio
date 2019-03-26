@@ -40,8 +40,6 @@ describe('Nav component', () => {
       portfolio: [{showModal: false}]
   })
 
-  let router = ''
-
   const wrapper =  mount(
     <MemoryRouter initialEntries={[ '/' ]}>
       <Provider store={store}>

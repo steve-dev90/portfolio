@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for client/components/Modal.jsx</title>
+    <title>Code coverage report for components/Nav.jsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
+            background-image: url(../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">client/components</a> Modal.jsx
+      <a href="../index.html">All files</a> / <a href="index.html">components</a> Nav.jsx
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">12.5% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/8</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/7</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">12.5% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/8</span>
+        <span class='fraction'>0/2</span>
       </div>
     </div>
     <p class="quiet">
@@ -91,10 +91,7 @@
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a>
-<a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L46'></a><a href='#L46'>46</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -114,18 +111,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -136,70 +121,76 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
-import { connect } from 'react-redux'
-import { handleCloseModal } from '../actions/portfolio'
-import ReactModal from 'react-modal'
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
+import {connect} from 'react-redux'
+import { handleOpenModal } from '../actions/portfolio'
+import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import Modal from './Modal'
 &nbsp;
-class Modal extends React.Component {
+class Nav extends React.Component {
 &nbsp;
 <span class="fstat-no" title="function not covered" >  re</span>nder() {
 <span class="cstat-no" title="statement not covered" >    return (</span>
       &lt;React.Fragment&gt;
+        &lt;nav className="navbar is-transparent is-size-4 is-fixed-top"&gt;
+          &lt;div className="container navbar"&gt;
+            &lt;div className="navbar-brand"&gt;
+              &lt;span className="spaceship"&gt;
+                &lt;img src="/images/alien-spaceship.png" alt="alien spaceship image"&gt;&lt;/img&gt;
+              &lt;/span&gt;
+              &lt;h1 className="navbar-item logo"&gt;Steve Torrens&lt;/h1&gt;
+            &lt;/div&gt;
 &nbsp;
-        &lt;ReactModal
-          isOpen={this.props.portfolio.showModal}
-          contentLabel="onRequestClose Example"
-          onRequestClose={this.handleCloseModal}
-          shouldCloseOnOverlayClick={true}
-          className="Modal has-background-info"
-          overlayClassName="Overlay"
-          &gt;
-          &lt;button className="button is-white is-pulled-right has-background-info" onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.props.dispatch(handleCloseModal())}</span>&gt;
-            &lt;span className="icon has-text-white is-size-6"&gt;&lt;i className="fa fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
-          &lt;/button&gt;
+            &lt;div className="navbar-item is-hidden-desktop burger-container"&gt;
+              &lt;button  className="burger" onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.props.dispatch(handleOpenModal())}</span> &gt;
+                &lt;span className="icon title is-4"&gt;
+                  &lt;i className="fa fa-bars has-text-link"&gt;&lt;/i&gt;
+                &lt;/span&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
 &nbsp;
-          &lt;Link replace to="./"&gt;&lt;button className="modal-item" onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.props.dispatch(handleCloseModal())}</span>&gt;
-            Home
-          &lt;/button&gt;&lt;/ Link&gt;
-          &lt;Link replace to="./projects"&gt;&lt;button className="modal-item" onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.props.dispatch(handleCloseModal())}</span>&gt;
-            Projects
-          &lt;/button&gt;&lt;/ Link&gt;
-          &lt;Link  replace to="./about"&gt;&lt;button className="modal-item"onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.props.dispatch(handleCloseModal())}</span>&gt;
-            About
-          &lt;/button&gt;&lt;/ Link&gt;
-          &lt;Link  replace to="./contact"&gt;&lt;button className="modal-item" onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.props.dispatch(handleCloseModal())}</span>&gt;
-            Contact
-          &lt;/button&gt;&lt;/ Link&gt;
-        &lt;/ReactModal&gt;
+            &lt;Modal /&gt;
 &nbsp;
+            &lt;div className= "navbar-menu" &gt;
+              &lt;div className="navbar-end is-uppercase is-hidden-mobile is-size-6  has-text-weight-semibold"&gt;
+                &lt;Link className="navbar-item has-text-info" replace to="./"&gt;Home&lt;/ Link&gt;
+                &lt;Link className="navbar-item has-text-info" replace to="./projects"&gt;Projects&lt;/ Link&gt;
+                &lt;Link className="navbar-item has-text-info" replace to="./about"&gt;About&lt;/ Link&gt;
+                &lt;Link className="navbar-item has-text-info" replace to="./contact"&gt;Contact&lt;/ Link&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+&nbsp;
+          &lt;/div&gt;
+        &lt;/nav&gt;
       &lt;/React.Fragment&gt;
   )}
 }
 &nbsp;
-const mapStateToProps = <span class="fstat-no" title="function not covered" >(s</span>tate) =&gt; {
-<span class="cstat-no" title="statement not covered" >  return {</span>
-    portfolio: state.portfolio,
-  }
-}
-&nbsp;
-export default connect(mapStateToProps)(Modal)</pre></td></tr>
+export default connect()(Nav)</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Mar 06 2019 17:32:05 GMT+1300 (NZDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Mar 06 2019 17:45:53 GMT+1300 (NZDT)
 </div>
 </div>
-<script src="../../prettify.js"></script>
+<script src="../prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -207,7 +198,7 @@ window.onload = function () {
         }
 };
 </script>
-<script src="../../sorter.js"></script>
-<script src="../../block-navigation.js"></script>
+<script src="../sorter.js"></script>
+<script src="../block-navigation.js"></script>
 </body>
 </html>
