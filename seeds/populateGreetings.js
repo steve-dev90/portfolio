@@ -16,6 +16,12 @@ exports.seed = function(knex, Promise) {
           { para: "I was responsible for designing, building and testing the back-end of this application. My work included database set-up, importing data using rake tasks, data validation design and setting up internal APIs. In particular, I designed and developed business logic to calculate comparative annual costs for different electricity retailers, taking into account the considerable range of tariff types and energy consumption patterns across Australia. I also set up front-end skeleton forms and assocciated API calls to assist the front-end developer." },
           { para: "Technologies that I used for this project included: Ruby on Rails, PostgreSQL, Minitest, Jquery, git and Heroku." }
         ]), old_project: false},
+        {id: 4, title: "Shopify Customised Theme", image: 'order-form.mp4', copy: JSON.stringify([
+          { para: "This is a small side project to customise a theme for the Shopify app. Customisations include custom inputs and an order form." },
+          { para: "The merchant can add up to four custom inputs to selected products. A custom input could be a checkbox, radio buttons, drop down or colour selector." },
+          { para: "The merchant is also able to add an order form page. Customers can choose which products to purchase, selecting any options and entering the quantity required. The order form caters for products with multiple variants and includes a collection selector and running total." },
+          { para: "Technologies used for this project included: Javascript, jQuery, HTML, CSS, SASS and Liquid"}
+        ]), old_project: false},
       ])
     })
 }
