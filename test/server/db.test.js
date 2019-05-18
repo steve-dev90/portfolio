@@ -17,7 +17,7 @@ afterEach(() => env.cleanup(testDb))
 test('read projects db', () => {
   return projectsDb.getProjects(testDb)
     .then(projects => {
-      expect(projects.length).toBe(3)
+      expect(projects.length).toBe(4)
       expect(projects[0].hasOwnProperty('image')).toBeTruthy()
     })
 })

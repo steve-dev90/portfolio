@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for portfolio/seeds/populateGreetings.js</title>
+    <title>Code coverage report for portfolio/client/components/Hero.jsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
+            background-image: url(../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">portfolio/seeds</a> populateGreetings.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">portfolio/client/components</a> Hero.jsx
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>3/3</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>3/3</span>
+        <span class='fraction'>1/1</span>
       </div>
     </div>
     <p class="quiet">
@@ -73,12 +73,29 @@
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -100,34 +117,56 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">exports.seed = function(knex, Promise) {
-  // Deletes ALL existing entries
-  return knex('projects').del()
-    .then(function () {
-      // Inserts seed entries
-      return knex('projects').insert([
-        {id: 1, title: "ShopBro2.0", image: 'shopbrovid.mp4', copy: JSON.stringify([
-          { para: "ShopBro2.0 was my final group project at bootcamp. The application helps people keep under budget when they are shopping. It also keeps track of past shopping spends." },
-          { para: "Front end technologies used include React.js, Redux.js, and bulma. For the backend we used node.js, express.js, postgres, and knex.js. The team also started to implement the project as a mobile app using React Native." }
-        ]), old_project: false},
-        {id: 2, title: "Square of Pointlessness", image: 'square.mp4', copy: JSON.stringify([
-          { para: "Square of Pointlessness was my final exercise for bootcamp prep. I used native Javascript to animate a square." }
-        ]), old_project: true},
-        {id: 3, title: "CompareBear Australia", image: 'Comparebear.png', copy: JSON.stringify([
-          { para: "I was contracted by a small start-up, called Glimp, to work on the launch of their Australian utility comparison website, called CompareBear. This site allows users to compare the price and services of different utility companies." },
-          { para: "I was responsible for designing, building and testing the back-end of this application. My work included database set-up, importing data using rake tasks, data validation design and setting up internal APIs. In particular, I designed and developed business logic to calculate comparative annual costs for different electricity retailers, taking into account the considerable range of tariff types and energy consumption patterns across Australia. I also set up front-end skeleton forms and assocciated API calls to assist the front-end developer." },
-          { para: "Technologies that I used for this project included: Ruby on Rails, PostgreSQL, Minitest, Jquery, git and Heroku." }
-        ]), old_project: false},
-        {id: 4, title: "Shopify Customised Theme", image: 'order-form.mp4', copy: JSON.stringify([
-          { para: "This is a small side project to customise a theme for the Shopify app. Customisations include custom inputs and an order form." },
-          { para: "The merchant can add up to four custom inputs to selected products. A custom input could be a checkbox, radio buttons, drop down or colour selector." },
-          { para: "The merchant is also able to add an order form page. Customers can choose which products to purchase, selecting any options and entering the quantity required. The order form caters for products with multiple variants and includes a collection selector and running total." },
-          { para: "Technologies used for this project included: Javascript, jQuery, HTML, CSS, SASS and Liquid"}
-        ]), old_project: false},
-      ])
-    })
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import { Link } from 'react-scroll'
+import Image from './Image'
+&nbsp;
+class Hero extends React.Component {
+&nbsp;
+  render() {
+    return (
+      &lt;React.Fragment&gt;
+        &lt;div className="columns is-gapless"&gt;
+&nbsp;
+        &lt;div className="column is-two-fifths is-hidden-mobile has-background-light heroimg-container"&gt;
+          &lt;Image src="/images/sketch3.jpg" imageStyle="heroimg" /&gt;
+        &lt;/div&gt;
+&nbsp;
+        &lt;div className="column is-three-fifths"&gt;
+          &lt;div className="hero is-fullheight is-light"&gt;
+            &lt;div className="hero-body "&gt;
+              &lt;div className="container"&gt;
+                &lt;h2 className="is-size-1 has-text-weight-bold has-text-info"&gt;
+                  Steve Torrens
+                &lt;/h2&gt;
+                &lt;h1 className="is-size-3 has-text-weight-semibold has-text-info"&gt;
+                  Full Stack Software Developer
+                &lt;/h1&gt;
+                &lt;div className="has-text-centered hero-arrow has-text-link"&gt;
+                  &lt;Link activeClass="active" className="Who" to="Who" offset={-60} spy={true} smooth={true} duration={600} &gt;
+                    &lt;i className="fa fa-angle-double-down"&gt;&lt;/i&gt;
+                  &lt;/Link&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+&nbsp;
+        &lt;/div&gt;
+      &lt;/React.Fragment&gt;
+    )}
 }
-&nbsp;</pre></td></tr>
+&nbsp;
+export default Hero</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
@@ -136,7 +175,7 @@
   generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat May 18 2019 10:24:12 GMT+1200 (NZST)
 </div>
 </div>
-<script src="../../prettify.js"></script>
+<script src="../../../prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -144,7 +183,7 @@ window.onload = function () {
         }
 };
 </script>
-<script src="../../sorter.js"></script>
-<script src="../../block-navigation.js"></script>
+<script src="../../../sorter.js"></script>
+<script src="../../../block-navigation.js"></script>
 </body>
 </html>

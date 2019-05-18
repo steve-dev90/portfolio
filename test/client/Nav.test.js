@@ -1,57 +1,51 @@
 import React from 'react'
-import { shallow, mount, configure } from 'enzyme'
+import { shallow } from 'enzyme'
 import './enzymeSetup'
-import Nav from '../../client/components/Nav'
-import { handleOpenModal } from '../../client/actions/portfolio'
-import './setup-dom'
-import {Provider} from 'react-redux'
-import configureStore from 'redux-mock-store'
-import { MemoryRouter } from 'react-router';
+import { Nav } from '../../client/components/Nav'
 
-const mockStore = configureStore([])
+const props = {
+  portfolio: [{ showModal: false }]
+};
 
-// jest.mock('../../client/actions/portfolio.js', () => ({
-//   handleOpenModal: () => ({
-//     type: 'FAKE_ACTION'
-//   })
-// }))
+describe('Nav', () => {
 
-// test('About.jsx buttons are working', () => {
-//   const store = mockStore({
-//     portfolio: [{aboutDisplay: true}]
-//   })
+  const wrapper = shallow(<Nav {...props} />)
 
-//   const wrapper = mount (
-//     <Provider store={store}>
-//       <About />
-//     </Provider>
-//   )
+  it('renders`Steve Torrens`', () => {
+    expect(wrapper.find('h1').text()).toEqual('Steve Torrens')
+  });
 
-//   wrapper.find('button').simulate('click')
+  it('renders a `/Home` link', () => {
+    expect(wrapper.find('Link').at(0).prop('to')).toEqual('./');
+  });
 
-//   expect(store.getActions()[0]).toEqual({
-//     type: 'FAKE_ACTION'
-//   })
-// })
+  it('renders a `/Home` link', () => {
+    expect(wrapper.find('Link').at(1).prop('to')).toEqual('./projects');
+  });
 
-describe('Nav component', () => {
+  it('renders a `/Home` link', () => {
+    expect(wrapper.find('Link').at(2).prop('to')).toEqual('./about');
+  });
 
-  const store = mockStore({
-      portfolio: [{showModal: false}]
-  })
+  it('renders a `/Home` link', () => {
+    expect(wrapper.find('Link').at(3).prop('to')).toEqual('./contact');
+  });
 
-  const wrapper =  mount(
-    <MemoryRouter initialEntries={[ '/' ]}>
-      <Provider store={store}>
-        <Nav />
-      </Provider>
-    </MemoryRouter>
-    )
+  describe('when clicking on the burger', () => {
 
-  console.log('hello', wrapper, wrapper.find('img'))
+    console.log('HELLO', props.portfolio)
 
-  it('contains home', () => {
-    console.log('hello', wrapper.find('nav'))
-    expect(wrapper.find('nav').first().text().includes('Home')).toBe(true)
+    beforeEach(() => {
+      wrapper.find('Button').at(0).simulate('click');
+    });
+
+    // afterEach(() => {
+    //   wrapper.setState({ portfolio: [{showModal: false}] });
+    // });
+
+    it('shows the nav modal', () => {
+      console.log('HELLO', wrapper.state())
+      expect(wrapper.state().portfolio.showModal).toBe(true);
+    });
   })
 })
