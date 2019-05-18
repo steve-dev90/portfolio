@@ -7,9 +7,12 @@ const props = {
   portfolio: [{ showModal: false }]
 };
 
+const mockHandleOpenModal = jest.fn();
+
 describe('Nav', () => {
 
-  const wrapper = shallow(<Nav {...props} />)
+  // This will have to change if I go to mapDispatchToProps
+  const wrapper = shallow(<Nav {...props} dispatch={mockHandleOpenModal} />)
 
   it('renders`Steve Torrens`', () => {
     expect(wrapper.find('h1').text()).toEqual('Steve Torrens')
@@ -33,19 +36,14 @@ describe('Nav', () => {
 
   describe('when clicking on the burger', () => {
 
-    console.log('HELLO', props.portfolio)
-
     beforeEach(() => {
-      wrapper.find('Button').at(0).simulate('click');
+      wrapper.find('button').at(0).simulate('click');
     });
 
-    // afterEach(() => {
-    //   wrapper.setState({ portfolio: [{showModal: false}] });
-    // });
-
-    it('shows the nav modal', () => {
-      console.log('HELLO', wrapper.state())
-      expect(wrapper.state().portfolio.showModal).toBe(true);
+    // This doesn't test the handleOpenModal action - that would be an integration test
+    // See https://hackernoon.com/unit-testing-redux-connected-components-692fa3c4441c
+    it('the dispatch function has been called', () => {
+      expect(mockHandleOpenModal.mock.calls.length).toBe(1)
     });
   })
 })
