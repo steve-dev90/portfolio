@@ -1,9 +1,9 @@
 import React from 'react'
 import { shallow, mount, configure } from 'enzyme'
 import './enzymeSetup'
-import About from '../../client/components/About'
+import About from '../../../client/components/About'
 import './setup-dom'
-import { showAbout, hideAbout } from '../../client/actions/portfolio'
+import { showAbout, hideAbout } from '../../../client/actions/portfolio'
 
 import {Provider} from 'react-redux'
 

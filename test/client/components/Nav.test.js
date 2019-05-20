@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import './enzymeSetup'
-import { Nav } from '../../client/components/Nav'
+import { Nav } from '../../../client/components/Nav'
 
 const props = {
   portfolio: [{ showModal: false }]

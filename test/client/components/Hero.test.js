@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import './enzymeSetup'
-import Hero from '../../client/components/Hero'
+import Hero from '../../../client/components/Hero'
 
 describe('Hero', () => {
   const wrapper = shallow(<Hero />)

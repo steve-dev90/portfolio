@@ -1,9 +1,3 @@
-export const hideContact = () => {
-  return {
-    type: 'HIDE_CONTACT'
-  }
-}
-
 export const showContactForm = () => {
   return {
     type: 'SHOW_CONTACT_FORM'

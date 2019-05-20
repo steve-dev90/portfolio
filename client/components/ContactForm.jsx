@@ -14,10 +14,11 @@ class ContactForm extends React.Component {
   }
 
   handleSubmit (input) {
-    const {dispatch} = this.props
+    const { dispatch } = this.props
     dispatch(sendEmail(input.name, input.message, input.email, input.message))
     dispatch(actions.reset('form_message'))
     dispatch(hideContactForm())
+    window.scrollTo(0, 0)
   }
 
   render(props) {

@@ -1,4 +1,4 @@
-import {getProjects, receiveProjects} from '../../client/actions/projects'
+import {getProjects, receiveProjects} from '../../../client/actions/projects'
 import nock from 'nock'
 
 test('Receive Projects action creator', () => {

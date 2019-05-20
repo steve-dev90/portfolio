@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import './enzymeSetup'
-import LandingContent from '../../client/components/LandingContent'
+import LandingContent from '../../../client/components/LandingContent'
 
 describe('LandingContent', () => {
   const wrapper = shallow(<LandingContent />)
