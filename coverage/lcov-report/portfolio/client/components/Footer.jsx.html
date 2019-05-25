@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for portfolio/client/components/Hero.jsx</title>
+    <title>Code coverage report for portfolio/client/components/Footer.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">portfolio/client/components</a> Hero.jsx
+      <a href="../../../index.html">All files</a> / <a href="index.html">portfolio/client/components</a> Footer.jsx
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>2/2</span>
       </div>
     </div>
     <p class="quiet">
@@ -85,14 +85,11 @@
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
-<a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -126,47 +123,47 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
-import { Link } from 'react-scroll'
-import Image from './Image'
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import React from 'react'
+import SocialIcons from './SocialIcons'
 &nbsp;
-class Hero extends React.Component {
-&nbsp;
-  render() {
-    return (
-      &lt;React.Fragment&gt;
-        &lt;div className="columns is-gapless"&gt;
-&nbsp;
-        &lt;div className="column is-two-fifths is-hidden-mobile has-background-light heroimg-container"&gt;
-          &lt;Image src="/images/sketch3.jpg" imageStyle="heroimg" /&gt;
-        &lt;/div&gt;
-&nbsp;
-        &lt;div className="column is-three-fifths"&gt;
-          &lt;div className="hero is-fullheight is-light"&gt;
-            &lt;div className="hero-body "&gt;
-              &lt;div className="container"&gt;
-                &lt;h2 className="is-size-1 has-text-weight-bold has-text-info"&gt;
-                  Steve Torrens
-                &lt;/h2&gt;
-                &lt;h1 className="is-size-3 has-text-weight-semibold has-text-info"&gt;
-                  Full Stack Software Developer
-                &lt;/h1&gt;
-                &lt;div className="has-text-centered hero-arrow has-text-link"&gt;
-                  &lt;Link activeClass="active" className="Who" to="Who" offset={-60} spy={true} smooth={true} duration={600} &gt;
-                    &lt;i className="fa fa-angle-double-down"&gt;&lt;/i&gt;
-                  &lt;/Link&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
+const Footer = () =&gt; (
+  &lt;React.Fragment&gt;
+    &lt;footer className="footer pagefooter"&gt;
+      &lt;div className="container"&gt;
+        &lt;div className="columns is-centered "&gt;
+          &lt;div className="column is-three-quarters has-text-centered"&gt;
+            &lt;SocialIcons /&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-&nbsp;
+        &lt;div className="columns is-centered"&gt;
+          &lt;div className="column is-three-quarters has-text-centered"&gt;
+            &lt;p className="is-size-7 has-text-weight-light"&gt;
+              &lt;span&gt;contactstorrens@gmail.com or &lt;/span&gt;
+              &lt;span className="has-text-link"&gt;&lt;Link to="./contact" replace&gt;send a message&lt;/ Link&gt;&lt;/span&gt;
+            &lt;/p&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
-      &lt;/React.Fragment&gt;
-    )}
-}
+        &lt;div className="spaceship"&gt;
+          &lt;img src="/images/alien-spaceship.png" alt="alien spaceship image"&gt;&lt;/img&gt;
+        &lt;/div&gt;
+        &lt;div className="columns is-mobile"&gt;
+          &lt;div className="column is-one-half"&gt;
+            &lt;p className="is-size-7"&gt;
+              &lt;span className="icon"&gt;
+                &lt;i className="fa fa-copyright icon-size"&gt;&lt;/i&gt;
+              &lt;/span&gt;
+              2019 Steve Torrens
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/footer&gt;
+  &lt;/React.Fragment&gt;
+)
 &nbsp;
-export default Hero</pre></td></tr>
+export default Footer</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->

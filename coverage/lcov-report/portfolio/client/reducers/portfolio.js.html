@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for portfolio/client/components/Hero.jsx</title>
+    <title>Code coverage report for portfolio/client/reducers/portfolio.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,18 +16,18 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">portfolio/client/components</a> Hero.jsx
+      <a href="../../../index.html">All files</a> / <a href="index.html">portfolio/client/reducers</a> portfolio.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">85.71% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>6/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>4/6</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">85.71% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>6/7</span>
       </div>
     </div>
     <p class="quiet">
@@ -82,11 +82,15 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a>
-<a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -100,73 +104,57 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
-import { Link } from 'react-scroll'
-import Image from './Image'
-&nbsp;
-class Hero extends React.Component {
-&nbsp;
-  render() {
-    return (
-      &lt;React.Fragment&gt;
-        &lt;div className="columns is-gapless"&gt;
-&nbsp;
-        &lt;div className="column is-two-fifths is-hidden-mobile has-background-light heroimg-container"&gt;
-          &lt;Image src="/images/sketch3.jpg" imageStyle="heroimg" /&gt;
-        &lt;/div&gt;
-&nbsp;
-        &lt;div className="column is-three-fifths"&gt;
-          &lt;div className="hero is-fullheight is-light"&gt;
-            &lt;div className="hero-body "&gt;
-              &lt;div className="container"&gt;
-                &lt;h2 className="is-size-1 has-text-weight-bold has-text-info"&gt;
-                  Steve Torrens
-                &lt;/h2&gt;
-                &lt;h1 className="is-size-3 has-text-weight-semibold has-text-info"&gt;
-                  Full Stack Software Developer
-                &lt;/h1&gt;
-                &lt;div className="has-text-centered hero-arrow has-text-link"&gt;
-                  &lt;Link activeClass="active" className="Who" to="Who" offset={-60} spy={true} smooth={true} duration={600} &gt;
-                    &lt;i className="fa fa-angle-double-down"&gt;&lt;/i&gt;
-                  &lt;/Link&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-&nbsp;
-        &lt;/div&gt;
-      &lt;/React.Fragment&gt;
-    )}
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const initialPortfolio ={
+  contactFormDisplay : true,
+  showModal : false
 }
 &nbsp;
-export default Hero</pre></td></tr>
+function portfolio (state = <span class="branch-0 cbranch-no" title="branch not covered" >initialPortfolio,</span> action) {
+    switch (action.type) {
+      case 'SHOW_CONTACT_FORM':
+        return {
+                projectsDisplay: state.projectsDisplay,
+                aboutDisplay: state.aboutDisplay,
+                contactDisplay : state.contactDisplay,
+                contactFormDisplay : true
+                }
+      case 'HIDE_CONTACT_FORM':
+        return {
+                projectsDisplay: state.projectsDisplay,
+                aboutDisplay: state.aboutDisplay,
+                contactDisplay : state.contactDisplay,
+                contactFormDisplay : false
+                }
+      case 'OPEN_MODAL':
+        return {
+                showModal: true,
+                contactFormDisplay : true
+                }
+      case 'CLOSE_MODAL':
+        return {
+                showModal: false,
+                contactFormDisplay : true
+                }
+<span class="branch-4 cbranch-no" title="branch not covered" >      default:</span>
+<span class="cstat-no" title="statement not covered" >        return state</span>
+    }
+}
+&nbsp;
+export default portfolio</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
